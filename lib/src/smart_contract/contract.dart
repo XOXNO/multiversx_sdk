@@ -86,7 +86,7 @@ class SmartContract {
     );
     final smartContractAddress =
         computeContractAddress(owner.address, owner.nonce);
-    final signedTransaction = signer.sign(transaction as ISignable);
+    final signedTransaction = signer.sign(transaction);
     final txHash = await proxy.sendTransaction(signedTransaction);
     final watcher = TransactionWatcher(txHash);
     late StreamSubscription transactionSubscription;
@@ -131,7 +131,7 @@ class SmartContract {
       receiver: _address!,
       balance: balance ?? Balance.zero(),
     );
-    final signedTransaction = signer.sign(transaction as ISignable);
+    final signedTransaction = signer.sign(transaction);
     final txHash = await proxy.sendTransaction(signedTransaction);
     final watcher = TransactionWatcher(txHash);
     late StreamSubscription transactionSubscription;
@@ -175,7 +175,7 @@ class SmartContract {
       receiver: _address!,
       balance: balance ?? Balance.zero(),
     );
-    final signedTransaction = signer.sign(transaction as ISignable);
+    final signedTransaction = signer.sign(transaction);
     final txHash = await proxy.sendTransaction(signedTransaction);
     final watcher = TransactionWatcher(txHash);
     late StreamSubscription transactionSubscription;

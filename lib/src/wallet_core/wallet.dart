@@ -120,7 +120,7 @@ class Wallet {
     required IProvider provider,
     required Transaction transaction,
   }) async {
-    final signedTransaction = signer.sign(transaction as ISignable);
+    final signedTransaction = signer.sign(transaction);
     final txHash = await provider.sendTransaction(signedTransaction);
     return txHash;
   }
