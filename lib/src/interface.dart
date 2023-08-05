@@ -4,6 +4,7 @@ import 'package:multiversx_sdk/src/models/request/vm_values/vm_values.dart';
 import 'package:multiversx_sdk/src/models/response/response.dart';
 import 'package:multiversx_sdk/src/models/response/transaction/transaction.dart';
 import 'package:multiversx_sdk/src/network_configuration.dart';
+import 'package:multiversx_sdk/src/signable_message.dart';
 import 'package:multiversx_sdk/src/signature.dart';
 import 'package:multiversx_sdk/src/transaction.dart';
 
@@ -39,4 +40,6 @@ abstract class ISigner {
   Address getAddress();
 
   Transaction sign(ISignable signable);
+
+  SignableMessage signMessage(SignableMessage signable);
 }

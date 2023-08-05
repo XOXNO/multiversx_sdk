@@ -1,5 +1,6 @@
 import 'package:multiversx_sdk/src/address.dart';
 import 'package:multiversx_sdk/src/interface.dart';
+import 'package:multiversx_sdk/src/signable_message.dart';
 import 'package:multiversx_sdk/src/signature.dart';
 import 'package:multiversx_sdk/src/transaction.dart';
 import 'package:multiversx_sdk/src/wallet_core/user_keys.dart';
@@ -19,5 +20,14 @@ class UserSigner extends ISigner {
     final signatureBytes = secretKey.sign(bytesToSign);
     final signature = Signature.fromBytes(signatureBytes);
     return signable.applySignature(signature, signedBy);
+  }
+
+  @override
+  SignableMessage signMessage(SignableMessage message) {
+    final bytesToSign = message.serializeForSigning();
+    final signatureBytes = secretKey.sign(bytesToSign);
+    final signature = Signature.fromBytes(signatureBytes);
+    message.applySignature(signature);
+    return message;
   }
 }
