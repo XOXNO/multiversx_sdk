@@ -5,6 +5,7 @@ export 'src/account.dart';
 export 'src/interface.dart';
 export 'src/proxy_provider.dart';
 export 'src/transaction.dart';
+export 'src/signable_message.dart';
 export 'src/transaction_payload.dart';
 export 'src/transaction_watcher.dart';
 export 'src/signature.dart';
