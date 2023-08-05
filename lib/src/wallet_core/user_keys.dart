@@ -24,7 +24,8 @@ class UserSecretKey {
 
   SignableMessage signMessage(SignableMessage message) {
     final signingKey = ed25519.SigningKey.fromSeed(Uint8List.fromList(bytes));
-    final signedMessage = signingKey.sign(message.message);
+    final toSign = message.serializeForSigning();
+    final signedMessage = signingKey.sign(toSign);
     final signature = Signature.fromBytes(signedMessage.signature.toList());
     message.applySignature(signature);
     return message;
