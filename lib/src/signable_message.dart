@@ -44,8 +44,7 @@ class SignableMessage {
     final bytesToHash = Uint8List.fromList(
         [...utf8.encode(MESSAGE_PREFIX), ...signableMessage]);
 
-    final digest = pointy.KeccakDigest(256). process(bytesToHash);
-    print(digest);
+    final digest = pointy.KeccakDigest(256).process(bytesToHash);
     return digest;
   }
 
