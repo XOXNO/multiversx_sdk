@@ -44,7 +44,9 @@ class SignableMessage {
     final bytesToHash = Uint8List.fromList(
         [...utf8.encode(MESSAGE_PREFIX), ...signableMessage]);
 
-    return pointy.KeccakDigest().process(bytesToHash);
+    final digest = pointy.KeccakDigest(256). process(bytesToHash);
+    print(digest);
+    return digest;
   }
 
   Uint8List serializeForSigningRaw() {
@@ -69,7 +71,7 @@ class SignableMessage {
 
   Map<String, dynamic> toJSON() {
     return {
-      'message': "0x" + hex.encode(this.message),
+      'message': hex.encode(this.message),
       'signature': this.signature.hex,
       'version': this.version,
       'signer': this.signer,
