@@ -43,6 +43,8 @@ mixin _$SendTransactionRequest {
   @NullableChainIdConverter()
   @JsonKey(name: 'chainID')
   ChainId? get chainId => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  int? get options => throw _privateConstructorUsedError;
   String get signature => throw _privateConstructorUsedError;
   String? get guardianSignature => throw _privateConstructorUsedError;
 
@@ -69,6 +71,7 @@ abstract class $SendTransactionRequestCopyWith<$Res> {
       @TransactionVersionConverter() TransactionVersion version,
       @JsonKey(includeIfNull: false) String? data,
       @NullableChainIdConverter() @JsonKey(name: 'chainID') ChainId? chainId,
+      @JsonKey(includeIfNull: false) int? options,
       String signature,
       String? guardianSignature});
 }
@@ -97,6 +100,7 @@ class _$SendTransactionRequestCopyWithImpl<$Res,
     Object? version = null,
     Object? data = freezed,
     Object? chainId = freezed,
+    Object? options = freezed,
     Object? signature = null,
     Object? guardianSignature = freezed,
   }) {
@@ -141,6 +145,10 @@ class _$SendTransactionRequestCopyWithImpl<$Res,
           ? _value.chainId
           : chainId // ignore: cast_nullable_to_non_nullable
               as ChainId?,
+      options: freezed == options
+          ? _value.options
+          : options // ignore: cast_nullable_to_non_nullable
+              as int?,
       signature: null == signature
           ? _value.signature
           : signature // ignore: cast_nullable_to_non_nullable
@@ -154,11 +162,12 @@ class _$SendTransactionRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SendTransactionRequestCopyWith<$Res>
+abstract class _$$SendTransactionRequestImplCopyWith<$Res>
     implements $SendTransactionRequestCopyWith<$Res> {
-  factory _$$_SendTransactionRequestCopyWith(_$_SendTransactionRequest value,
-          $Res Function(_$_SendTransactionRequest) then) =
-      __$$_SendTransactionRequestCopyWithImpl<$Res>;
+  factory _$$SendTransactionRequestImplCopyWith(
+          _$SendTransactionRequestImpl value,
+          $Res Function(_$SendTransactionRequestImpl) then) =
+      __$$SendTransactionRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -172,17 +181,19 @@ abstract class _$$_SendTransactionRequestCopyWith<$Res>
       @TransactionVersionConverter() TransactionVersion version,
       @JsonKey(includeIfNull: false) String? data,
       @NullableChainIdConverter() @JsonKey(name: 'chainID') ChainId? chainId,
+      @JsonKey(includeIfNull: false) int? options,
       String signature,
       String? guardianSignature});
 }
 
 /// @nodoc
-class __$$_SendTransactionRequestCopyWithImpl<$Res>
+class __$$SendTransactionRequestImplCopyWithImpl<$Res>
     extends _$SendTransactionRequestCopyWithImpl<$Res,
-        _$_SendTransactionRequest>
-    implements _$$_SendTransactionRequestCopyWith<$Res> {
-  __$$_SendTransactionRequestCopyWithImpl(_$_SendTransactionRequest _value,
-      $Res Function(_$_SendTransactionRequest) _then)
+        _$SendTransactionRequestImpl>
+    implements _$$SendTransactionRequestImplCopyWith<$Res> {
+  __$$SendTransactionRequestImplCopyWithImpl(
+      _$SendTransactionRequestImpl _value,
+      $Res Function(_$SendTransactionRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -198,10 +209,11 @@ class __$$_SendTransactionRequestCopyWithImpl<$Res>
     Object? version = null,
     Object? data = freezed,
     Object? chainId = freezed,
+    Object? options = freezed,
     Object? signature = null,
     Object? guardianSignature = freezed,
   }) {
-    return _then(_$_SendTransactionRequest(
+    return _then(_$SendTransactionRequestImpl(
       nonce: freezed == nonce
           ? _value.nonce
           : nonce // ignore: cast_nullable_to_non_nullable
@@ -242,6 +254,10 @@ class __$$_SendTransactionRequestCopyWithImpl<$Res>
           ? _value.chainId
           : chainId // ignore: cast_nullable_to_non_nullable
               as ChainId?,
+      options: freezed == options
+          ? _value.options
+          : options // ignore: cast_nullable_to_non_nullable
+              as int?,
       signature: null == signature
           ? _value.signature
           : signature // ignore: cast_nullable_to_non_nullable
@@ -256,8 +272,8 @@ class __$$_SendTransactionRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SendTransactionRequest implements _SendTransactionRequest {
-  _$_SendTransactionRequest(
+class _$SendTransactionRequestImpl implements _SendTransactionRequest {
+  _$SendTransactionRequestImpl(
       {@JsonKey(includeIfNull: false) @NullableNonceConverter() this.nonce,
       @BalanceConverter() required this.value,
       @AddressConverter() required this.receiver,
@@ -268,11 +284,12 @@ class _$_SendTransactionRequest implements _SendTransactionRequest {
       @TransactionVersionConverter() required this.version,
       @JsonKey(includeIfNull: false) this.data,
       @NullableChainIdConverter() @JsonKey(name: 'chainID') this.chainId,
+      @JsonKey(includeIfNull: false) this.options,
       required this.signature,
-      required this.guardianSignature});
+      this.guardianSignature});
 
-  factory _$_SendTransactionRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_SendTransactionRequestFromJson(json);
+  factory _$SendTransactionRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SendTransactionRequestImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -307,20 +324,23 @@ class _$_SendTransactionRequest implements _SendTransactionRequest {
   @JsonKey(name: 'chainID')
   final ChainId? chainId;
   @override
+  @JsonKey(includeIfNull: false)
+  final int? options;
+  @override
   final String signature;
   @override
   final String? guardianSignature;
 
   @override
   String toString() {
-    return 'SendTransactionRequest(nonce: $nonce, value: $value, receiver: $receiver, sender: $sender, guardian: $guardian, gasPrice: $gasPrice, gasLimit: $gasLimit, version: $version, data: $data, chainId: $chainId, signature: $signature, guardianSignature: $guardianSignature)';
+    return 'SendTransactionRequest(nonce: $nonce, value: $value, receiver: $receiver, sender: $sender, guardian: $guardian, gasPrice: $gasPrice, gasLimit: $gasLimit, version: $version, data: $data, chainId: $chainId, options: $options, signature: $signature, guardianSignature: $guardianSignature)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendTransactionRequest &&
+            other is _$SendTransactionRequestImpl &&
             (identical(other.nonce, nonce) || other.nonce == nonce) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.receiver, receiver) ||
@@ -335,6 +355,7 @@ class _$_SendTransactionRequest implements _SendTransactionRequest {
             (identical(other.version, version) || other.version == version) &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.chainId, chainId) || other.chainId == chainId) &&
+            (identical(other.options, options) || other.options == options) &&
             (identical(other.signature, signature) ||
                 other.signature == signature) &&
             (identical(other.guardianSignature, guardianSignature) ||
@@ -355,19 +376,20 @@ class _$_SendTransactionRequest implements _SendTransactionRequest {
       version,
       data,
       chainId,
+      options,
       signature,
       guardianSignature);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendTransactionRequestCopyWith<_$_SendTransactionRequest> get copyWith =>
-      __$$_SendTransactionRequestCopyWithImpl<_$_SendTransactionRequest>(
-          this, _$identity);
+  _$$SendTransactionRequestImplCopyWith<_$SendTransactionRequestImpl>
+      get copyWith => __$$SendTransactionRequestImplCopyWithImpl<
+          _$SendTransactionRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SendTransactionRequestToJson(
+    return _$$SendTransactionRequestImplToJson(
       this,
     );
   }
@@ -389,11 +411,12 @@ abstract class _SendTransactionRequest implements SendTransactionRequest {
       @NullableChainIdConverter()
       @JsonKey(name: 'chainID')
       final ChainId? chainId,
+      @JsonKey(includeIfNull: false) final int? options,
       required final String signature,
-      required final String? guardianSignature}) = _$_SendTransactionRequest;
+      final String? guardianSignature}) = _$SendTransactionRequestImpl;
 
   factory _SendTransactionRequest.fromJson(Map<String, dynamic> json) =
-      _$_SendTransactionRequest.fromJson;
+      _$SendTransactionRequestImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -428,11 +451,14 @@ abstract class _SendTransactionRequest implements SendTransactionRequest {
   @JsonKey(name: 'chainID')
   ChainId? get chainId;
   @override
+  @JsonKey(includeIfNull: false)
+  int? get options;
+  @override
   String get signature;
   @override
   String? get guardianSignature;
   @override
   @JsonKey(ignore: true)
-  _$$_SendTransactionRequestCopyWith<_$_SendTransactionRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SendTransactionRequestImplCopyWith<_$SendTransactionRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

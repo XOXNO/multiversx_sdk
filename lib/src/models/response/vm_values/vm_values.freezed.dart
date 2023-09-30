@@ -72,11 +72,11 @@ class _$VmValuesResponseCopyWithImpl<$Res, $Val extends VmValuesResponse>
 }
 
 /// @nodoc
-abstract class _$$_VmValuesResponseCopyWith<$Res>
+abstract class _$$VmValuesResponseImplCopyWith<$Res>
     implements $VmValuesResponseCopyWith<$Res> {
-  factory _$$_VmValuesResponseCopyWith(
-          _$_VmValuesResponse value, $Res Function(_$_VmValuesResponse) then) =
-      __$$_VmValuesResponseCopyWithImpl<$Res>;
+  factory _$$VmValuesResponseImplCopyWith(_$VmValuesResponseImpl value,
+          $Res Function(_$VmValuesResponseImpl) then) =
+      __$$VmValuesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({VmValueData data});
@@ -86,11 +86,11 @@ abstract class _$$_VmValuesResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VmValuesResponseCopyWithImpl<$Res>
-    extends _$VmValuesResponseCopyWithImpl<$Res, _$_VmValuesResponse>
-    implements _$$_VmValuesResponseCopyWith<$Res> {
-  __$$_VmValuesResponseCopyWithImpl(
-      _$_VmValuesResponse _value, $Res Function(_$_VmValuesResponse) _then)
+class __$$VmValuesResponseImplCopyWithImpl<$Res>
+    extends _$VmValuesResponseCopyWithImpl<$Res, _$VmValuesResponseImpl>
+    implements _$$VmValuesResponseImplCopyWith<$Res> {
+  __$$VmValuesResponseImplCopyWithImpl(_$VmValuesResponseImpl _value,
+      $Res Function(_$VmValuesResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$_VmValuesResponseCopyWithImpl<$Res>
   $Res call({
     Object? data = null,
   }) {
-    return _then(_$_VmValuesResponse(
+    return _then(_$VmValuesResponseImpl(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -109,11 +109,11 @@ class __$$_VmValuesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VmValuesResponse implements _VmValuesResponse {
-  _$_VmValuesResponse({required this.data});
+class _$VmValuesResponseImpl implements _VmValuesResponse {
+  _$VmValuesResponseImpl({required this.data});
 
-  factory _$_VmValuesResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_VmValuesResponseFromJson(json);
+  factory _$VmValuesResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VmValuesResponseImplFromJson(json);
 
   @override
   final VmValueData data;
@@ -127,7 +127,7 @@ class _$_VmValuesResponse implements _VmValuesResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VmValuesResponse &&
+            other is _$VmValuesResponseImpl &&
             (identical(other.data, data) || other.data == data));
   }
 
@@ -138,12 +138,13 @@ class _$_VmValuesResponse implements _VmValuesResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VmValuesResponseCopyWith<_$_VmValuesResponse> get copyWith =>
-      __$$_VmValuesResponseCopyWithImpl<_$_VmValuesResponse>(this, _$identity);
+  _$$VmValuesResponseImplCopyWith<_$VmValuesResponseImpl> get copyWith =>
+      __$$VmValuesResponseImplCopyWithImpl<_$VmValuesResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VmValuesResponseToJson(
+    return _$$VmValuesResponseImplToJson(
       this,
     );
   }
@@ -151,16 +152,16 @@ class _$_VmValuesResponse implements _VmValuesResponse {
 
 abstract class _VmValuesResponse implements VmValuesResponse {
   factory _VmValuesResponse({required final VmValueData data}) =
-      _$_VmValuesResponse;
+      _$VmValuesResponseImpl;
 
   factory _VmValuesResponse.fromJson(Map<String, dynamic> json) =
-      _$_VmValuesResponse.fromJson;
+      _$VmValuesResponseImpl.fromJson;
 
   @override
   VmValueData get data;
   @override
   @JsonKey(ignore: true)
-  _$$_VmValuesResponseCopyWith<_$_VmValuesResponse> get copyWith =>
+  _$$VmValuesResponseImplCopyWith<_$VmValuesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -249,11 +250,11 @@ class _$VmValueDataCopyWithImpl<$Res, $Val extends VmValueData>
 }
 
 /// @nodoc
-abstract class _$$_VmValueDataCopyWith<$Res>
+abstract class _$$VmValueDataImplCopyWith<$Res>
     implements $VmValueDataCopyWith<$Res> {
-  factory _$$_VmValueDataCopyWith(
-          _$_VmValueData value, $Res Function(_$_VmValueData) then) =
-      __$$_VmValueDataCopyWithImpl<$Res>;
+  factory _$$VmValueDataImplCopyWith(
+          _$VmValueDataImpl value, $Res Function(_$VmValueDataImpl) then) =
+      __$$VmValueDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -266,11 +267,11 @@ abstract class _$$_VmValueDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VmValueDataCopyWithImpl<$Res>
-    extends _$VmValueDataCopyWithImpl<$Res, _$_VmValueData>
-    implements _$$_VmValueDataCopyWith<$Res> {
-  __$$_VmValueDataCopyWithImpl(
-      _$_VmValueData _value, $Res Function(_$_VmValueData) _then)
+class __$$VmValueDataImplCopyWithImpl<$Res>
+    extends _$VmValueDataCopyWithImpl<$Res, _$VmValueDataImpl>
+    implements _$$VmValueDataImplCopyWith<$Res> {
+  __$$VmValueDataImplCopyWithImpl(
+      _$VmValueDataImpl _value, $Res Function(_$VmValueDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -283,7 +284,7 @@ class __$$_VmValueDataCopyWithImpl<$Res>
     Object? gasRefund = null,
     Object? outputAccounts = null,
   }) {
-    return _then(_$_VmValueData(
+    return _then(_$VmValueDataImpl(
       returnData: null == returnData
           ? _value._returnData
           : returnData // ignore: cast_nullable_to_non_nullable
@@ -314,8 +315,8 @@ class __$$_VmValueDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VmValueData implements _VmValueData {
-  _$_VmValueData(
+class _$VmValueDataImpl implements _VmValueData {
+  _$VmValueDataImpl(
       {final List<String> returnData = const [],
       required this.returnCode,
       required this.returnMessage,
@@ -325,8 +326,8 @@ class _$_VmValueData implements _VmValueData {
       : _returnData = returnData,
         _outputAccounts = outputAccounts;
 
-  factory _$_VmValueData.fromJson(Map<String, dynamic> json) =>
-      _$$_VmValueDataFromJson(json);
+  factory _$VmValueDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VmValueDataImplFromJson(json);
 
   final List<String> _returnData;
   @override
@@ -362,7 +363,7 @@ class _$_VmValueData implements _VmValueData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VmValueData &&
+            other is _$VmValueDataImpl &&
             const DeepCollectionEquality()
                 .equals(other._returnData, _returnData) &&
             (identical(other.returnCode, returnCode) ||
@@ -391,12 +392,12 @@ class _$_VmValueData implements _VmValueData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VmValueDataCopyWith<_$_VmValueData> get copyWith =>
-      __$$_VmValueDataCopyWithImpl<_$_VmValueData>(this, _$identity);
+  _$$VmValueDataImplCopyWith<_$VmValueDataImpl> get copyWith =>
+      __$$VmValueDataImplCopyWithImpl<_$VmValueDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VmValueDataToJson(
+    return _$$VmValueDataImplToJson(
       this,
     );
   }
@@ -410,10 +411,10 @@ abstract class _VmValueData implements VmValueData {
           required final double gasRemaining,
           required final int gasRefund,
           required final Map<String, OutputAccountData> outputAccounts}) =
-      _$_VmValueData;
+      _$VmValueDataImpl;
 
   factory _VmValueData.fromJson(Map<String, dynamic> json) =
-      _$_VmValueData.fromJson;
+      _$VmValueDataImpl.fromJson;
 
   @override
   List<String> get returnData;
@@ -429,7 +430,7 @@ abstract class _VmValueData implements VmValueData {
   Map<String, OutputAccountData> get outputAccounts;
   @override
   @JsonKey(ignore: true)
-  _$$_VmValueDataCopyWith<_$_VmValueData> get copyWith =>
+  _$$VmValueDataImplCopyWith<_$VmValueDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -506,11 +507,11 @@ class _$OutputAccountDataCopyWithImpl<$Res, $Val extends OutputAccountData>
 }
 
 /// @nodoc
-abstract class _$$_OutputAccountDataCopyWith<$Res>
+abstract class _$$OutputAccountDataImplCopyWith<$Res>
     implements $OutputAccountDataCopyWith<$Res> {
-  factory _$$_OutputAccountDataCopyWith(_$_OutputAccountData value,
-          $Res Function(_$_OutputAccountData) then) =
-      __$$_OutputAccountDataCopyWithImpl<$Res>;
+  factory _$$OutputAccountDataImplCopyWith(_$OutputAccountDataImpl value,
+          $Res Function(_$OutputAccountDataImpl) then) =
+      __$$OutputAccountDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -521,11 +522,11 @@ abstract class _$$_OutputAccountDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_OutputAccountDataCopyWithImpl<$Res>
-    extends _$OutputAccountDataCopyWithImpl<$Res, _$_OutputAccountData>
-    implements _$$_OutputAccountDataCopyWith<$Res> {
-  __$$_OutputAccountDataCopyWithImpl(
-      _$_OutputAccountData _value, $Res Function(_$_OutputAccountData) _then)
+class __$$OutputAccountDataImplCopyWithImpl<$Res>
+    extends _$OutputAccountDataCopyWithImpl<$Res, _$OutputAccountDataImpl>
+    implements _$$OutputAccountDataImplCopyWith<$Res> {
+  __$$OutputAccountDataImplCopyWithImpl(_$OutputAccountDataImpl _value,
+      $Res Function(_$OutputAccountDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -536,7 +537,7 @@ class __$$_OutputAccountDataCopyWithImpl<$Res>
     Object? balanceDelta = null,
     Object? storageUpdates = null,
   }) {
-    return _then(_$_OutputAccountData(
+    return _then(_$OutputAccountDataImpl(
       address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -559,16 +560,16 @@ class __$$_OutputAccountDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_OutputAccountData implements _OutputAccountData {
-  _$_OutputAccountData(
+class _$OutputAccountDataImpl implements _OutputAccountData {
+  _$OutputAccountDataImpl(
       {@AddressConverter() required this.address,
       @NonceConverter() required this.nonce,
       required this.balanceDelta,
       required final Map<String, StorageUpdateData> storageUpdates})
       : _storageUpdates = storageUpdates;
 
-  factory _$_OutputAccountData.fromJson(Map<String, dynamic> json) =>
-      _$$_OutputAccountDataFromJson(json);
+  factory _$OutputAccountDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$OutputAccountDataImplFromJson(json);
 
   @override
   @AddressConverter()
@@ -595,7 +596,7 @@ class _$_OutputAccountData implements _OutputAccountData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OutputAccountData &&
+            other is _$OutputAccountDataImpl &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.nonce, nonce) || other.nonce == nonce) &&
             (identical(other.balanceDelta, balanceDelta) ||
@@ -612,13 +613,13 @@ class _$_OutputAccountData implements _OutputAccountData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OutputAccountDataCopyWith<_$_OutputAccountData> get copyWith =>
-      __$$_OutputAccountDataCopyWithImpl<_$_OutputAccountData>(
+  _$$OutputAccountDataImplCopyWith<_$OutputAccountDataImpl> get copyWith =>
+      __$$OutputAccountDataImplCopyWithImpl<_$OutputAccountDataImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OutputAccountDataToJson(
+    return _$$OutputAccountDataImplToJson(
       this,
     );
   }
@@ -630,10 +631,10 @@ abstract class _OutputAccountData implements OutputAccountData {
           @NonceConverter() required final Nonce nonce,
           required final int balanceDelta,
           required final Map<String, StorageUpdateData> storageUpdates}) =
-      _$_OutputAccountData;
+      _$OutputAccountDataImpl;
 
   factory _OutputAccountData.fromJson(Map<String, dynamic> json) =
-      _$_OutputAccountData.fromJson;
+      _$OutputAccountDataImpl.fromJson;
 
   @override
   @AddressConverter()
@@ -647,7 +648,7 @@ abstract class _OutputAccountData implements OutputAccountData {
   Map<String, StorageUpdateData> get storageUpdates;
   @override
   @JsonKey(ignore: true)
-  _$$_OutputAccountDataCopyWith<_$_OutputAccountData> get copyWith =>
+  _$$OutputAccountDataImplCopyWith<_$OutputAccountDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -705,22 +706,22 @@ class _$StorageUpdateDataCopyWithImpl<$Res, $Val extends StorageUpdateData>
 }
 
 /// @nodoc
-abstract class _$$_StorageUpdateDataCopyWith<$Res>
+abstract class _$$StorageUpdateDataImplCopyWith<$Res>
     implements $StorageUpdateDataCopyWith<$Res> {
-  factory _$$_StorageUpdateDataCopyWith(_$_StorageUpdateData value,
-          $Res Function(_$_StorageUpdateData) then) =
-      __$$_StorageUpdateDataCopyWithImpl<$Res>;
+  factory _$$StorageUpdateDataImplCopyWith(_$StorageUpdateDataImpl value,
+          $Res Function(_$StorageUpdateDataImpl) then) =
+      __$$StorageUpdateDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String offset, String data});
 }
 
 /// @nodoc
-class __$$_StorageUpdateDataCopyWithImpl<$Res>
-    extends _$StorageUpdateDataCopyWithImpl<$Res, _$_StorageUpdateData>
-    implements _$$_StorageUpdateDataCopyWith<$Res> {
-  __$$_StorageUpdateDataCopyWithImpl(
-      _$_StorageUpdateData _value, $Res Function(_$_StorageUpdateData) _then)
+class __$$StorageUpdateDataImplCopyWithImpl<$Res>
+    extends _$StorageUpdateDataCopyWithImpl<$Res, _$StorageUpdateDataImpl>
+    implements _$$StorageUpdateDataImplCopyWith<$Res> {
+  __$$StorageUpdateDataImplCopyWithImpl(_$StorageUpdateDataImpl _value,
+      $Res Function(_$StorageUpdateDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -729,7 +730,7 @@ class __$$_StorageUpdateDataCopyWithImpl<$Res>
     Object? offset = null,
     Object? data = null,
   }) {
-    return _then(_$_StorageUpdateData(
+    return _then(_$StorageUpdateDataImpl(
       offset: null == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
@@ -744,11 +745,11 @@ class __$$_StorageUpdateDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StorageUpdateData implements _StorageUpdateData {
-  _$_StorageUpdateData({required this.offset, required this.data});
+class _$StorageUpdateDataImpl implements _StorageUpdateData {
+  _$StorageUpdateDataImpl({required this.offset, required this.data});
 
-  factory _$_StorageUpdateData.fromJson(Map<String, dynamic> json) =>
-      _$$_StorageUpdateDataFromJson(json);
+  factory _$StorageUpdateDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StorageUpdateDataImplFromJson(json);
 
   @override
   final String offset;
@@ -764,7 +765,7 @@ class _$_StorageUpdateData implements _StorageUpdateData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StorageUpdateData &&
+            other is _$StorageUpdateDataImpl &&
             (identical(other.offset, offset) || other.offset == offset) &&
             (identical(other.data, data) || other.data == data));
   }
@@ -776,13 +777,13 @@ class _$_StorageUpdateData implements _StorageUpdateData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StorageUpdateDataCopyWith<_$_StorageUpdateData> get copyWith =>
-      __$$_StorageUpdateDataCopyWithImpl<_$_StorageUpdateData>(
+  _$$StorageUpdateDataImplCopyWith<_$StorageUpdateDataImpl> get copyWith =>
+      __$$StorageUpdateDataImplCopyWithImpl<_$StorageUpdateDataImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StorageUpdateDataToJson(
+    return _$$StorageUpdateDataImplToJson(
       this,
     );
   }
@@ -791,10 +792,10 @@ class _$_StorageUpdateData implements _StorageUpdateData {
 abstract class _StorageUpdateData implements StorageUpdateData {
   factory _StorageUpdateData(
       {required final String offset,
-      required final String data}) = _$_StorageUpdateData;
+      required final String data}) = _$StorageUpdateDataImpl;
 
   factory _StorageUpdateData.fromJson(Map<String, dynamic> json) =
-      _$_StorageUpdateData.fromJson;
+      _$StorageUpdateDataImpl.fromJson;
 
   @override
   String get offset;
@@ -802,6 +803,6 @@ abstract class _StorageUpdateData implements StorageUpdateData {
   String get data;
   @override
   @JsonKey(ignore: true)
-  _$$_StorageUpdateDataCopyWith<_$_StorageUpdateData> get copyWith =>
+  _$$StorageUpdateDataImplCopyWith<_$StorageUpdateDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

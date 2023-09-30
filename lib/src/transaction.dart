@@ -62,6 +62,7 @@ class Transaction extends ISignable {
   final Signature signature;
   final Signature guardianSignature;
   final TransactionHash? transactionHash;
+  final int? options;
 
   Transaction({
     required this.nonce,
@@ -74,6 +75,7 @@ class Transaction extends ISignable {
     required this.chainId,
     required this.version,
     this.signature = const Signature.empty(),
+    this.options,
     this.guardianSignature = const Signature.empty(),
     this.guardian,
     this.transactionHash,
@@ -416,6 +418,10 @@ class Transaction extends ISignable {
     }
     map['chainID'] = chainId.value;
     map['version'] = version.value;
+
+    if (options != null) {
+      map['options'] = options;
+    }
     if (signature.hex.isNotEmpty) {
       map['signature'] = signature.hex;
     }
@@ -434,6 +440,7 @@ class Transaction extends ISignable {
           TransactionVersion? newVersion,
           Signature? newGuardianSignature,
           Address? newGuardian,
+          int? newOptions,
           Address? newSender}) =>
       Transaction(
         nonce: nonce,
@@ -446,6 +453,7 @@ class Transaction extends ISignable {
         chainId: chainId,
         version: newVersion ?? version,
         signature: newSignature ?? signature,
+        options: newOptions ?? options,
         transactionHash: newTransactionHash ?? transactionHash,
       );
 
@@ -464,6 +472,7 @@ class Transaction extends ISignable {
       copyWith(newGuardianSignature: signature);
 
   Transaction setGuardian(Address guardian) => copyWith(newGuardian: guardian);
+  Transaction setOptions(int options) => copyWith(newOptions: options);
 }
 
 class TransactionHash {

@@ -63,22 +63,22 @@ class _$SendTransactionDataCopyWithImpl<$Res, $Val extends SendTransactionData>
 }
 
 /// @nodoc
-abstract class _$$_SendTransactionDataCopyWith<$Res>
+abstract class _$$SendTransactionDataImplCopyWith<$Res>
     implements $SendTransactionDataCopyWith<$Res> {
-  factory _$$_SendTransactionDataCopyWith(_$_SendTransactionData value,
-          $Res Function(_$_SendTransactionData) then) =
-      __$$_SendTransactionDataCopyWithImpl<$Res>;
+  factory _$$SendTransactionDataImplCopyWith(_$SendTransactionDataImpl value,
+          $Res Function(_$SendTransactionDataImpl) then) =
+      __$$SendTransactionDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@TransactionHashConverter() TransactionHash txHash});
 }
 
 /// @nodoc
-class __$$_SendTransactionDataCopyWithImpl<$Res>
-    extends _$SendTransactionDataCopyWithImpl<$Res, _$_SendTransactionData>
-    implements _$$_SendTransactionDataCopyWith<$Res> {
-  __$$_SendTransactionDataCopyWithImpl(_$_SendTransactionData _value,
-      $Res Function(_$_SendTransactionData) _then)
+class __$$SendTransactionDataImplCopyWithImpl<$Res>
+    extends _$SendTransactionDataCopyWithImpl<$Res, _$SendTransactionDataImpl>
+    implements _$$SendTransactionDataImplCopyWith<$Res> {
+  __$$SendTransactionDataImplCopyWithImpl(_$SendTransactionDataImpl _value,
+      $Res Function(_$SendTransactionDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -86,7 +86,7 @@ class __$$_SendTransactionDataCopyWithImpl<$Res>
   $Res call({
     Object? txHash = null,
   }) {
-    return _then(_$_SendTransactionData(
+    return _then(_$SendTransactionDataImpl(
       txHash: null == txHash
           ? _value.txHash
           : txHash // ignore: cast_nullable_to_non_nullable
@@ -97,11 +97,11 @@ class __$$_SendTransactionDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SendTransactionData implements _SendTransactionData {
-  _$_SendTransactionData({@TransactionHashConverter() required this.txHash});
+class _$SendTransactionDataImpl implements _SendTransactionData {
+  _$SendTransactionDataImpl({@TransactionHashConverter() required this.txHash});
 
-  factory _$_SendTransactionData.fromJson(Map<String, dynamic> json) =>
-      _$$_SendTransactionDataFromJson(json);
+  factory _$SendTransactionDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SendTransactionDataImplFromJson(json);
 
   @override
   @TransactionHashConverter()
@@ -116,7 +116,7 @@ class _$_SendTransactionData implements _SendTransactionData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendTransactionData &&
+            other is _$SendTransactionDataImpl &&
             (identical(other.txHash, txHash) || other.txHash == txHash));
   }
 
@@ -127,13 +127,13 @@ class _$_SendTransactionData implements _SendTransactionData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendTransactionDataCopyWith<_$_SendTransactionData> get copyWith =>
-      __$$_SendTransactionDataCopyWithImpl<_$_SendTransactionData>(
+  _$$SendTransactionDataImplCopyWith<_$SendTransactionDataImpl> get copyWith =>
+      __$$SendTransactionDataImplCopyWithImpl<_$SendTransactionDataImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SendTransactionDataToJson(
+    return _$$SendTransactionDataImplToJson(
       this,
     );
   }
@@ -142,17 +142,17 @@ class _$_SendTransactionData implements _SendTransactionData {
 abstract class _SendTransactionData implements SendTransactionData {
   factory _SendTransactionData(
           {@TransactionHashConverter() required final TransactionHash txHash}) =
-      _$_SendTransactionData;
+      _$SendTransactionDataImpl;
 
   factory _SendTransactionData.fromJson(Map<String, dynamic> json) =
-      _$_SendTransactionData.fromJson;
+      _$SendTransactionDataImpl.fromJson;
 
   @override
   @TransactionHashConverter()
   TransactionHash get txHash;
   @override
   @JsonKey(ignore: true)
-  _$$_SendTransactionDataCopyWith<_$_SendTransactionData> get copyWith =>
+  _$$SendTransactionDataImplCopyWith<_$SendTransactionDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -214,25 +214,25 @@ class _$SendMultipleTransactionResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SendMultipleTransactionResponseCopyWith<$Res>
+abstract class _$$SendMultipleTransactionResponseImplCopyWith<$Res>
     implements $SendMultipleTransactionResponseCopyWith<$Res> {
-  factory _$$_SendMultipleTransactionResponseCopyWith(
-          _$_SendMultipleTransactionResponse value,
-          $Res Function(_$_SendMultipleTransactionResponse) then) =
-      __$$_SendMultipleTransactionResponseCopyWithImpl<$Res>;
+  factory _$$SendMultipleTransactionResponseImplCopyWith(
+          _$SendMultipleTransactionResponseImpl value,
+          $Res Function(_$SendMultipleTransactionResponseImpl) then) =
+      __$$SendMultipleTransactionResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int numOfSentTxs, Map<String, String> txsHashes});
 }
 
 /// @nodoc
-class __$$_SendMultipleTransactionResponseCopyWithImpl<$Res>
+class __$$SendMultipleTransactionResponseImplCopyWithImpl<$Res>
     extends _$SendMultipleTransactionResponseCopyWithImpl<$Res,
-        _$_SendMultipleTransactionResponse>
-    implements _$$_SendMultipleTransactionResponseCopyWith<$Res> {
-  __$$_SendMultipleTransactionResponseCopyWithImpl(
-      _$_SendMultipleTransactionResponse _value,
-      $Res Function(_$_SendMultipleTransactionResponse) _then)
+        _$SendMultipleTransactionResponseImpl>
+    implements _$$SendMultipleTransactionResponseImplCopyWith<$Res> {
+  __$$SendMultipleTransactionResponseImplCopyWithImpl(
+      _$SendMultipleTransactionResponseImpl _value,
+      $Res Function(_$SendMultipleTransactionResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -241,7 +241,7 @@ class __$$_SendMultipleTransactionResponseCopyWithImpl<$Res>
     Object? numOfSentTxs = null,
     Object? txsHashes = null,
   }) {
-    return _then(_$_SendMultipleTransactionResponse(
+    return _then(_$SendMultipleTransactionResponseImpl(
       numOfSentTxs: null == numOfSentTxs
           ? _value.numOfSentTxs
           : numOfSentTxs // ignore: cast_nullable_to_non_nullable
@@ -256,16 +256,16 @@ class __$$_SendMultipleTransactionResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SendMultipleTransactionResponse
+class _$SendMultipleTransactionResponseImpl
     implements _SendMultipleTransactionResponse {
-  _$_SendMultipleTransactionResponse(
+  _$SendMultipleTransactionResponseImpl(
       {required this.numOfSentTxs,
       required final Map<String, String> txsHashes})
       : _txsHashes = txsHashes;
 
-  factory _$_SendMultipleTransactionResponse.fromJson(
+  factory _$SendMultipleTransactionResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_SendMultipleTransactionResponseFromJson(json);
+      _$$SendMultipleTransactionResponseImplFromJson(json);
 
   @override
   final int numOfSentTxs;
@@ -286,7 +286,7 @@ class _$_SendMultipleTransactionResponse
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendMultipleTransactionResponse &&
+            other is _$SendMultipleTransactionResponseImpl &&
             (identical(other.numOfSentTxs, numOfSentTxs) ||
                 other.numOfSentTxs == numOfSentTxs) &&
             const DeepCollectionEquality()
@@ -301,14 +301,14 @@ class _$_SendMultipleTransactionResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendMultipleTransactionResponseCopyWith<
-          _$_SendMultipleTransactionResponse>
-      get copyWith => __$$_SendMultipleTransactionResponseCopyWithImpl<
-          _$_SendMultipleTransactionResponse>(this, _$identity);
+  _$$SendMultipleTransactionResponseImplCopyWith<
+          _$SendMultipleTransactionResponseImpl>
+      get copyWith => __$$SendMultipleTransactionResponseImplCopyWithImpl<
+          _$SendMultipleTransactionResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SendMultipleTransactionResponseToJson(
+    return _$$SendMultipleTransactionResponseImplToJson(
       this,
     );
   }
@@ -319,10 +319,10 @@ abstract class _SendMultipleTransactionResponse
   factory _SendMultipleTransactionResponse(
           {required final int numOfSentTxs,
           required final Map<String, String> txsHashes}) =
-      _$_SendMultipleTransactionResponse;
+      _$SendMultipleTransactionResponseImpl;
 
   factory _SendMultipleTransactionResponse.fromJson(Map<String, dynamic> json) =
-      _$_SendMultipleTransactionResponse.fromJson;
+      _$SendMultipleTransactionResponseImpl.fromJson;
 
   @override
   int get numOfSentTxs;
@@ -330,8 +330,8 @@ abstract class _SendMultipleTransactionResponse
   Map<String, String> get txsHashes;
   @override
   @JsonKey(ignore: true)
-  _$$_SendMultipleTransactionResponseCopyWith<
-          _$_SendMultipleTransactionResponse>
+  _$$SendMultipleTransactionResponseImplCopyWith<
+          _$SendMultipleTransactionResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -385,24 +385,25 @@ class _$GetTransactionStatusDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetTransactionStatusDataCopyWith<$Res>
+abstract class _$$GetTransactionStatusDataImplCopyWith<$Res>
     implements $GetTransactionStatusDataCopyWith<$Res> {
-  factory _$$_GetTransactionStatusDataCopyWith(
-          _$_GetTransactionStatusData value,
-          $Res Function(_$_GetTransactionStatusData) then) =
-      __$$_GetTransactionStatusDataCopyWithImpl<$Res>;
+  factory _$$GetTransactionStatusDataImplCopyWith(
+          _$GetTransactionStatusDataImpl value,
+          $Res Function(_$GetTransactionStatusDataImpl) then) =
+      __$$GetTransactionStatusDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({TransactionStatus status});
 }
 
 /// @nodoc
-class __$$_GetTransactionStatusDataCopyWithImpl<$Res>
+class __$$GetTransactionStatusDataImplCopyWithImpl<$Res>
     extends _$GetTransactionStatusDataCopyWithImpl<$Res,
-        _$_GetTransactionStatusData>
-    implements _$$_GetTransactionStatusDataCopyWith<$Res> {
-  __$$_GetTransactionStatusDataCopyWithImpl(_$_GetTransactionStatusData _value,
-      $Res Function(_$_GetTransactionStatusData) _then)
+        _$GetTransactionStatusDataImpl>
+    implements _$$GetTransactionStatusDataImplCopyWith<$Res> {
+  __$$GetTransactionStatusDataImplCopyWithImpl(
+      _$GetTransactionStatusDataImpl _value,
+      $Res Function(_$GetTransactionStatusDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -410,7 +411,7 @@ class __$$_GetTransactionStatusDataCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
   }) {
-    return _then(_$_GetTransactionStatusData(
+    return _then(_$GetTransactionStatusDataImpl(
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -421,11 +422,11 @@ class __$$_GetTransactionStatusDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTransactionStatusData implements _GetTransactionStatusData {
-  _$_GetTransactionStatusData({required this.status});
+class _$GetTransactionStatusDataImpl implements _GetTransactionStatusData {
+  _$GetTransactionStatusDataImpl({required this.status});
 
-  factory _$_GetTransactionStatusData.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTransactionStatusDataFromJson(json);
+  factory _$GetTransactionStatusDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTransactionStatusDataImplFromJson(json);
 
   @override
   final TransactionStatus status;
@@ -439,7 +440,7 @@ class _$_GetTransactionStatusData implements _GetTransactionStatusData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTransactionStatusData &&
+            other is _$GetTransactionStatusDataImpl &&
             (identical(other.status, status) || other.status == status));
   }
 
@@ -450,13 +451,13 @@ class _$_GetTransactionStatusData implements _GetTransactionStatusData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTransactionStatusDataCopyWith<_$_GetTransactionStatusData>
-      get copyWith => __$$_GetTransactionStatusDataCopyWithImpl<
-          _$_GetTransactionStatusData>(this, _$identity);
+  _$$GetTransactionStatusDataImplCopyWith<_$GetTransactionStatusDataImpl>
+      get copyWith => __$$GetTransactionStatusDataImplCopyWithImpl<
+          _$GetTransactionStatusDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTransactionStatusDataToJson(
+    return _$$GetTransactionStatusDataImplToJson(
       this,
     );
   }
@@ -464,16 +465,16 @@ class _$_GetTransactionStatusData implements _GetTransactionStatusData {
 
 abstract class _GetTransactionStatusData implements GetTransactionStatusData {
   factory _GetTransactionStatusData({required final TransactionStatus status}) =
-      _$_GetTransactionStatusData;
+      _$GetTransactionStatusDataImpl;
 
   factory _GetTransactionStatusData.fromJson(Map<String, dynamic> json) =
-      _$_GetTransactionStatusData.fromJson;
+      _$GetTransactionStatusDataImpl.fromJson;
 
   @override
   TransactionStatus get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTransactionStatusDataCopyWith<_$_GetTransactionStatusData>
+  _$$GetTransactionStatusDataImplCopyWith<_$GetTransactionStatusDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -663,16 +664,16 @@ class _$GetTransactionInformationsWithSmartContractResultDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetTransactionInformationsWithSmartContractResultDataCopyWith<
+abstract class _$$GetTransactionInformationsWithSmartContractResultDataImplCopyWith<
         $Res>
     implements
         $GetTransactionInformationsWithSmartContractResultDataCopyWith<$Res> {
-  factory _$$_GetTransactionInformationsWithSmartContractResultDataCopyWith(
-          _$_GetTransactionInformationsWithSmartContractResultData value,
+  factory _$$GetTransactionInformationsWithSmartContractResultDataImplCopyWith(
+          _$GetTransactionInformationsWithSmartContractResultDataImpl value,
           $Res Function(
-                  _$_GetTransactionInformationsWithSmartContractResultData)
+                  _$GetTransactionInformationsWithSmartContractResultDataImpl)
               then) =
-      __$$_GetTransactionInformationsWithSmartContractResultDataCopyWithImpl<
+      __$$GetTransactionInformationsWithSmartContractResultDataImplCopyWithImpl<
           $Res>;
   @override
   @useResult
@@ -698,16 +699,16 @@ abstract class _$$_GetTransactionInformationsWithSmartContractResultDataCopyWith
 }
 
 /// @nodoc
-class __$$_GetTransactionInformationsWithSmartContractResultDataCopyWithImpl<
+class __$$GetTransactionInformationsWithSmartContractResultDataImplCopyWithImpl<
         $Res>
     extends _$GetTransactionInformationsWithSmartContractResultDataCopyWithImpl<
-        $Res, _$_GetTransactionInformationsWithSmartContractResultData>
+        $Res, _$GetTransactionInformationsWithSmartContractResultDataImpl>
     implements
-        _$$_GetTransactionInformationsWithSmartContractResultDataCopyWith<
+        _$$GetTransactionInformationsWithSmartContractResultDataImplCopyWith<
             $Res> {
-  __$$_GetTransactionInformationsWithSmartContractResultDataCopyWithImpl(
-      _$_GetTransactionInformationsWithSmartContractResultData _value,
-      $Res Function(_$_GetTransactionInformationsWithSmartContractResultData)
+  __$$GetTransactionInformationsWithSmartContractResultDataImplCopyWithImpl(
+      _$GetTransactionInformationsWithSmartContractResultDataImpl _value,
+      $Res Function(_$GetTransactionInformationsWithSmartContractResultDataImpl)
           _then)
       : super(_value, _then);
 
@@ -733,7 +734,7 @@ class __$$_GetTransactionInformationsWithSmartContractResultDataCopyWithImpl<
     Object? txHash = null,
     Object? value = null,
   }) {
-    return _then(_$_GetTransactionInformationsWithSmartContractResultData(
+    return _then(_$GetTransactionInformationsWithSmartContractResultDataImpl(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -812,9 +813,9 @@ class __$$_GetTransactionInformationsWithSmartContractResultDataCopyWithImpl<
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTransactionInformationsWithSmartContractResultData
+class _$GetTransactionInformationsWithSmartContractResultDataImpl
     implements _GetTransactionInformationsWithSmartContractResultData {
-  _$_GetTransactionInformationsWithSmartContractResultData(
+  _$GetTransactionInformationsWithSmartContractResultDataImpl(
       {required this.data,
       required this.fee,
       @GasLimitConverter() required this.gasLimit,
@@ -835,9 +836,10 @@ class _$_GetTransactionInformationsWithSmartContractResultData
       @BalanceConverter() required this.value})
       : _scResults = scResults;
 
-  factory _$_GetTransactionInformationsWithSmartContractResultData.fromJson(
+  factory _$GetTransactionInformationsWithSmartContractResultDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_GetTransactionInformationsWithSmartContractResultDataFromJson(json);
+      _$$GetTransactionInformationsWithSmartContractResultDataImplFromJson(
+          json);
 
   @override
   final String data;
@@ -898,7 +900,8 @@ class _$_GetTransactionInformationsWithSmartContractResultData
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTransactionInformationsWithSmartContractResultData &&
+            other
+                is _$GetTransactionInformationsWithSmartContractResultDataImpl &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.fee, fee) || other.fee == fee) &&
             (identical(other.gasLimit, gasLimit) ||
@@ -954,16 +957,16 @@ class _$_GetTransactionInformationsWithSmartContractResultData
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTransactionInformationsWithSmartContractResultDataCopyWith<
-          _$_GetTransactionInformationsWithSmartContractResultData>
+  _$$GetTransactionInformationsWithSmartContractResultDataImplCopyWith<
+          _$GetTransactionInformationsWithSmartContractResultDataImpl>
       get copyWith =>
-          __$$_GetTransactionInformationsWithSmartContractResultDataCopyWithImpl<
-                  _$_GetTransactionInformationsWithSmartContractResultData>(
+          __$$GetTransactionInformationsWithSmartContractResultDataImplCopyWithImpl<
+                  _$GetTransactionInformationsWithSmartContractResultDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTransactionInformationsWithSmartContractResultDataToJson(
+    return _$$GetTransactionInformationsWithSmartContractResultDataImplToJson(
       this,
     );
   }
@@ -990,11 +993,11 @@ abstract class _GetTransactionInformationsWithSmartContractResultData
           required final int timestamp,
           @TransactionHashConverter() required final TransactionHash txHash,
           @BalanceConverter() required final Balance value}) =
-      _$_GetTransactionInformationsWithSmartContractResultData;
+      _$GetTransactionInformationsWithSmartContractResultDataImpl;
 
   factory _GetTransactionInformationsWithSmartContractResultData.fromJson(
           Map<String, dynamic> json) =
-      _$_GetTransactionInformationsWithSmartContractResultData.fromJson;
+      _$GetTransactionInformationsWithSmartContractResultDataImpl.fromJson;
 
   @override
   String get data;
@@ -1041,8 +1044,8 @@ abstract class _GetTransactionInformationsWithSmartContractResultData
   Balance get value;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTransactionInformationsWithSmartContractResultDataCopyWith<
-          _$_GetTransactionInformationsWithSmartContractResultData>
+  _$$GetTransactionInformationsWithSmartContractResultDataImplCopyWith<
+          _$GetTransactionInformationsWithSmartContractResultDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1182,11 +1185,12 @@ class _$SmartContractResultDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SmartContractResultDataCopyWith<$Res>
+abstract class _$$SmartContractResultDataImplCopyWith<$Res>
     implements $SmartContractResultDataCopyWith<$Res> {
-  factory _$$_SmartContractResultDataCopyWith(_$_SmartContractResultData value,
-          $Res Function(_$_SmartContractResultData) then) =
-      __$$_SmartContractResultDataCopyWithImpl<$Res>;
+  factory _$$SmartContractResultDataImplCopyWith(
+          _$SmartContractResultDataImpl value,
+          $Res Function(_$SmartContractResultDataImpl) then) =
+      __$$SmartContractResultDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1205,12 +1209,13 @@ abstract class _$$_SmartContractResultDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SmartContractResultDataCopyWithImpl<$Res>
+class __$$SmartContractResultDataImplCopyWithImpl<$Res>
     extends _$SmartContractResultDataCopyWithImpl<$Res,
-        _$_SmartContractResultData>
-    implements _$$_SmartContractResultDataCopyWith<$Res> {
-  __$$_SmartContractResultDataCopyWithImpl(_$_SmartContractResultData _value,
-      $Res Function(_$_SmartContractResultData) _then)
+        _$SmartContractResultDataImpl>
+    implements _$$SmartContractResultDataImplCopyWith<$Res> {
+  __$$SmartContractResultDataImplCopyWithImpl(
+      _$SmartContractResultDataImpl _value,
+      $Res Function(_$SmartContractResultDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1229,7 +1234,7 @@ class __$$_SmartContractResultDataCopyWithImpl<$Res>
     Object? sender = null,
     Object? value = null,
   }) {
-    return _then(_$_SmartContractResultData(
+    return _then(_$SmartContractResultDataImpl(
       callType: null == callType
           ? _value.callType
           : callType // ignore: cast_nullable_to_non_nullable
@@ -1284,8 +1289,8 @@ class __$$_SmartContractResultDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SmartContractResultData implements _SmartContractResultData {
-  _$_SmartContractResultData(
+class _$SmartContractResultDataImpl implements _SmartContractResultData {
+  _$SmartContractResultDataImpl(
       {required this.callType,
       required this.data,
       @GasLimitConverter() required this.gasLimit,
@@ -1299,8 +1304,8 @@ class _$_SmartContractResultData implements _SmartContractResultData {
       @AddressConverter() required this.sender,
       @BalanceConverter() required this.value});
 
-  factory _$_SmartContractResultData.fromJson(Map<String, dynamic> json) =>
-      _$$_SmartContractResultDataFromJson(json);
+  factory _$SmartContractResultDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SmartContractResultDataImplFromJson(json);
 
   @override
   final String callType;
@@ -1344,7 +1349,7 @@ class _$_SmartContractResultData implements _SmartContractResultData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SmartContractResultData &&
+            other is _$SmartContractResultDataImpl &&
             (identical(other.callType, callType) ||
                 other.callType == callType) &&
             (identical(other.data, data) || other.data == data) &&
@@ -1386,14 +1391,13 @@ class _$_SmartContractResultData implements _SmartContractResultData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SmartContractResultDataCopyWith<_$_SmartContractResultData>
-      get copyWith =>
-          __$$_SmartContractResultDataCopyWithImpl<_$_SmartContractResultData>(
-              this, _$identity);
+  _$$SmartContractResultDataImplCopyWith<_$SmartContractResultDataImpl>
+      get copyWith => __$$SmartContractResultDataImplCopyWithImpl<
+          _$SmartContractResultDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SmartContractResultDataToJson(
+    return _$$SmartContractResultDataImplToJson(
       this,
     );
   }
@@ -1413,10 +1417,10 @@ abstract class _SmartContractResultData implements SmartContractResultData {
       required final String relayedValue,
       @AddressConverter() required final Address sender,
       @BalanceConverter()
-      required final Balance value}) = _$_SmartContractResultData;
+      required final Balance value}) = _$SmartContractResultDataImpl;
 
   factory _SmartContractResultData.fromJson(Map<String, dynamic> json) =
-      _$_SmartContractResultData.fromJson;
+      _$SmartContractResultDataImpl.fromJson;
 
   @override
   String get callType;
@@ -1452,6 +1456,6 @@ abstract class _SmartContractResultData implements SmartContractResultData {
   Balance get value;
   @override
   @JsonKey(ignore: true)
-  _$$_SmartContractResultDataCopyWith<_$_SmartContractResultData>
+  _$$SmartContractResultDataImplCopyWith<_$SmartContractResultDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

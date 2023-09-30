@@ -76,12 +76,12 @@ class _$NetworkConfigurationDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NetworkConfigurationDataCopyWith<$Res>
+abstract class _$$NetworkConfigurationDataImplCopyWith<$Res>
     implements $NetworkConfigurationDataCopyWith<$Res> {
-  factory _$$_NetworkConfigurationDataCopyWith(
-          _$_NetworkConfigurationData value,
-          $Res Function(_$_NetworkConfigurationData) then) =
-      __$$_NetworkConfigurationDataCopyWithImpl<$Res>;
+  factory _$$NetworkConfigurationDataImplCopyWith(
+          _$NetworkConfigurationDataImpl value,
+          $Res Function(_$NetworkConfigurationDataImpl) then) =
+      __$$NetworkConfigurationDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({NetworkConfigurationInformationsData config});
@@ -91,12 +91,13 @@ abstract class _$$_NetworkConfigurationDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NetworkConfigurationDataCopyWithImpl<$Res>
+class __$$NetworkConfigurationDataImplCopyWithImpl<$Res>
     extends _$NetworkConfigurationDataCopyWithImpl<$Res,
-        _$_NetworkConfigurationData>
-    implements _$$_NetworkConfigurationDataCopyWith<$Res> {
-  __$$_NetworkConfigurationDataCopyWithImpl(_$_NetworkConfigurationData _value,
-      $Res Function(_$_NetworkConfigurationData) _then)
+        _$NetworkConfigurationDataImpl>
+    implements _$$NetworkConfigurationDataImplCopyWith<$Res> {
+  __$$NetworkConfigurationDataImplCopyWithImpl(
+      _$NetworkConfigurationDataImpl _value,
+      $Res Function(_$NetworkConfigurationDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +105,7 @@ class __$$_NetworkConfigurationDataCopyWithImpl<$Res>
   $Res call({
     Object? config = null,
   }) {
-    return _then(_$_NetworkConfigurationData(
+    return _then(_$NetworkConfigurationDataImpl(
       config: null == config
           ? _value.config
           : config // ignore: cast_nullable_to_non_nullable
@@ -115,11 +116,11 @@ class __$$_NetworkConfigurationDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NetworkConfigurationData implements _NetworkConfigurationData {
-  _$_NetworkConfigurationData({required this.config});
+class _$NetworkConfigurationDataImpl implements _NetworkConfigurationData {
+  _$NetworkConfigurationDataImpl({required this.config});
 
-  factory _$_NetworkConfigurationData.fromJson(Map<String, dynamic> json) =>
-      _$$_NetworkConfigurationDataFromJson(json);
+  factory _$NetworkConfigurationDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NetworkConfigurationDataImplFromJson(json);
 
   @override
   final NetworkConfigurationInformationsData config;
@@ -133,7 +134,7 @@ class _$_NetworkConfigurationData implements _NetworkConfigurationData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NetworkConfigurationData &&
+            other is _$NetworkConfigurationDataImpl &&
             (identical(other.config, config) || other.config == config));
   }
 
@@ -144,13 +145,13 @@ class _$_NetworkConfigurationData implements _NetworkConfigurationData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NetworkConfigurationDataCopyWith<_$_NetworkConfigurationData>
-      get copyWith => __$$_NetworkConfigurationDataCopyWithImpl<
-          _$_NetworkConfigurationData>(this, _$identity);
+  _$$NetworkConfigurationDataImplCopyWith<_$NetworkConfigurationDataImpl>
+      get copyWith => __$$NetworkConfigurationDataImplCopyWithImpl<
+          _$NetworkConfigurationDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NetworkConfigurationDataToJson(
+    return _$$NetworkConfigurationDataImplToJson(
       this,
     );
   }
@@ -159,16 +160,16 @@ class _$_NetworkConfigurationData implements _NetworkConfigurationData {
 abstract class _NetworkConfigurationData implements NetworkConfigurationData {
   factory _NetworkConfigurationData(
           {required final NetworkConfigurationInformationsData config}) =
-      _$_NetworkConfigurationData;
+      _$NetworkConfigurationDataImpl;
 
   factory _NetworkConfigurationData.fromJson(Map<String, dynamic> json) =
-      _$_NetworkConfigurationData.fromJson;
+      _$NetworkConfigurationDataImpl.fromJson;
 
   @override
   NetworkConfigurationInformationsData get config;
   @override
   @JsonKey(ignore: true)
-  _$$_NetworkConfigurationDataCopyWith<_$_NetworkConfigurationData>
+  _$$NetworkConfigurationDataImplCopyWith<_$NetworkConfigurationDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -345,12 +346,12 @@ class _$NetworkConfigurationInformationsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NetworkConfigurationInformationsDataCopyWith<$Res>
+abstract class _$$NetworkConfigurationInformationsDataImplCopyWith<$Res>
     implements $NetworkConfigurationInformationsDataCopyWith<$Res> {
-  factory _$$_NetworkConfigurationInformationsDataCopyWith(
-          _$_NetworkConfigurationInformationsData value,
-          $Res Function(_$_NetworkConfigurationInformationsData) then) =
-      __$$_NetworkConfigurationInformationsDataCopyWithImpl<$Res>;
+  factory _$$NetworkConfigurationInformationsDataImplCopyWith(
+          _$NetworkConfigurationInformationsDataImpl value,
+          $Res Function(_$NetworkConfigurationInformationsDataImpl) then) =
+      __$$NetworkConfigurationInformationsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -380,13 +381,13 @@ abstract class _$$_NetworkConfigurationInformationsDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NetworkConfigurationInformationsDataCopyWithImpl<$Res>
+class __$$NetworkConfigurationInformationsDataImplCopyWithImpl<$Res>
     extends _$NetworkConfigurationInformationsDataCopyWithImpl<$Res,
-        _$_NetworkConfigurationInformationsData>
-    implements _$$_NetworkConfigurationInformationsDataCopyWith<$Res> {
-  __$$_NetworkConfigurationInformationsDataCopyWithImpl(
-      _$_NetworkConfigurationInformationsData _value,
-      $Res Function(_$_NetworkConfigurationInformationsData) _then)
+        _$NetworkConfigurationInformationsDataImpl>
+    implements _$$NetworkConfigurationInformationsDataImplCopyWith<$Res> {
+  __$$NetworkConfigurationInformationsDataImplCopyWithImpl(
+      _$NetworkConfigurationInformationsDataImpl _value,
+      $Res Function(_$NetworkConfigurationInformationsDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -407,7 +408,7 @@ class __$$_NetworkConfigurationInformationsDataCopyWithImpl<$Res>
     Object? shardConsensusGroupSize = null,
     Object? startTime = null,
   }) {
-    return _then(_$_NetworkConfigurationInformationsData(
+    return _then(_$NetworkConfigurationInformationsDataImpl(
       chainId: null == chainId
           ? _value.chainId
           : chainId // ignore: cast_nullable_to_non_nullable
@@ -470,9 +471,9 @@ class __$$_NetworkConfigurationInformationsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NetworkConfigurationInformationsData
+class _$NetworkConfigurationInformationsDataImpl
     implements _NetworkConfigurationInformationsData {
-  _$_NetworkConfigurationInformationsData(
+  _$NetworkConfigurationInformationsDataImpl(
       {@ChainIdConverter() @JsonKey(name: 'erd_chain_id') required this.chainId,
       @JsonKey(name: 'erd_denomination') required this.denomination,
       @JsonKey(name: 'erd_gas_per_data_byte') required this.gasPerDataByte,
@@ -498,9 +499,9 @@ class _$_NetworkConfigurationInformationsData
       required this.shardConsensusGroupSize,
       @JsonKey(name: 'erd_start_time') required this.startTime});
 
-  factory _$_NetworkConfigurationInformationsData.fromJson(
+  factory _$NetworkConfigurationInformationsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_NetworkConfigurationInformationsDataFromJson(json);
+      _$$NetworkConfigurationInformationsDataImplFromJson(json);
 
   @override
   @ChainIdConverter()
@@ -558,7 +559,7 @@ class _$_NetworkConfigurationInformationsData
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NetworkConfigurationInformationsData &&
+            other is _$NetworkConfigurationInformationsDataImpl &&
             (identical(other.chainId, chainId) || other.chainId == chainId) &&
             (identical(other.denomination, denomination) ||
                 other.denomination == denomination) &&
@@ -612,14 +613,14 @@ class _$_NetworkConfigurationInformationsData
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NetworkConfigurationInformationsDataCopyWith<
-          _$_NetworkConfigurationInformationsData>
-      get copyWith => __$$_NetworkConfigurationInformationsDataCopyWithImpl<
-          _$_NetworkConfigurationInformationsData>(this, _$identity);
+  _$$NetworkConfigurationInformationsDataImplCopyWith<
+          _$NetworkConfigurationInformationsDataImpl>
+      get copyWith => __$$NetworkConfigurationInformationsDataImplCopyWithImpl<
+          _$NetworkConfigurationInformationsDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NetworkConfigurationInformationsDataToJson(
+    return _$$NetworkConfigurationInformationsDataImplToJson(
       this,
     );
   }
@@ -656,11 +657,12 @@ abstract class _NetworkConfigurationInformationsData
       @JsonKey(name: 'erd_shard_consensus_group_size')
       required final int shardConsensusGroupSize,
       @JsonKey(name: 'erd_start_time')
-      required final int startTime}) = _$_NetworkConfigurationInformationsData;
+      required final int
+          startTime}) = _$NetworkConfigurationInformationsDataImpl;
 
   factory _NetworkConfigurationInformationsData.fromJson(
           Map<String, dynamic> json) =
-      _$_NetworkConfigurationInformationsData.fromJson;
+      _$NetworkConfigurationInformationsDataImpl.fromJson;
 
   @override
   @ChainIdConverter()
@@ -710,7 +712,7 @@ abstract class _NetworkConfigurationInformationsData
   int get startTime;
   @override
   @JsonKey(ignore: true)
-  _$$_NetworkConfigurationInformationsDataCopyWith<
-          _$_NetworkConfigurationInformationsData>
+  _$$NetworkConfigurationInformationsDataImplCopyWith<
+          _$NetworkConfigurationInformationsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

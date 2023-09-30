@@ -6,23 +6,23 @@ part of 'network.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_NetworkConfigurationData _$$_NetworkConfigurationDataFromJson(
+_$NetworkConfigurationDataImpl _$$NetworkConfigurationDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NetworkConfigurationData(
+    _$NetworkConfigurationDataImpl(
       config: NetworkConfigurationInformationsData.fromJson(
           json['config'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NetworkConfigurationDataToJson(
-        _$_NetworkConfigurationData instance) =>
+Map<String, dynamic> _$$NetworkConfigurationDataImplToJson(
+        _$NetworkConfigurationDataImpl instance) =>
     <String, dynamic>{
       'config': instance.config,
     };
 
-_$_NetworkConfigurationInformationsData
-    _$$_NetworkConfigurationInformationsDataFromJson(
+_$NetworkConfigurationInformationsDataImpl
+    _$$NetworkConfigurationInformationsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_NetworkConfigurationInformationsData(
+        _$NetworkConfigurationInformationsDataImpl(
           chainId:
               const ChainIdConverter().fromJson(json['erd_chain_id'] as String),
           denomination: json['erd_denomination'] as int,
@@ -45,8 +45,8 @@ _$_NetworkConfigurationInformationsData
           startTime: json['erd_start_time'] as int,
         );
 
-Map<String, dynamic> _$$_NetworkConfigurationInformationsDataToJson(
-        _$_NetworkConfigurationInformationsData instance) =>
+Map<String, dynamic> _$$NetworkConfigurationInformationsDataImplToJson(
+        _$NetworkConfigurationInformationsDataImpl instance) =>
     <String, dynamic>{
       'erd_chain_id': const ChainIdConverter().toJson(instance.chainId),
       'erd_denomination': instance.denomination,

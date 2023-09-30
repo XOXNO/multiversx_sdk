@@ -6,9 +6,9 @@ part of 'send_transaction.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SendTransactionRequest _$$_SendTransactionRequestFromJson(
+_$SendTransactionRequestImpl _$$SendTransactionRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SendTransactionRequest(
+    _$SendTransactionRequestImpl(
       nonce: const NullableNonceConverter().fromJson(json['nonce'] as int?),
       value: const BalanceConverter().fromJson(json['value'] as String),
       receiver: const AddressConverter().fromJson(json['receiver'] as String),
@@ -22,12 +22,13 @@ _$_SendTransactionRequest _$$_SendTransactionRequestFromJson(
       data: json['data'] as String?,
       chainId:
           const NullableChainIdConverter().fromJson(json['chainID'] as String?),
+      options: json['options'] as int?,
       signature: json['signature'] as String,
       guardianSignature: json['guardianSignature'] as String?,
     );
 
-Map<String, dynamic> _$$_SendTransactionRequestToJson(
-    _$_SendTransactionRequest instance) {
+Map<String, dynamic> _$$SendTransactionRequestImplToJson(
+    _$SendTransactionRequestImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -46,6 +47,7 @@ Map<String, dynamic> _$$_SendTransactionRequestToJson(
   val['version'] = const TransactionVersionConverter().toJson(instance.version);
   writeNotNull('data', instance.data);
   val['chainID'] = const NullableChainIdConverter().toJson(instance.chainId);
+  writeNotNull('options', instance.options);
   val['signature'] = instance.signature;
   val['guardianSignature'] = instance.guardianSignature;
   return val;

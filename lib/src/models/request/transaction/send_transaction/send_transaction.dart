@@ -23,8 +23,9 @@ class SendTransactionRequest with _$SendTransactionRequest {
     @TransactionVersionConverter() required TransactionVersion version,
     @JsonKey(includeIfNull: false) String? data,
     @NullableChainIdConverter() @JsonKey(name: 'chainID') ChainId? chainId,
+    @JsonKey(includeIfNull: false) int? options,
     required String signature,
-    required String? guardianSignature,
+    String? guardianSignature,
   }) = _SendTransactionRequest;
 
   factory SendTransactionRequest.fromJson(Map<String, dynamic> json) =>

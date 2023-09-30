@@ -6,49 +6,49 @@ part of 'transaction.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SendTransactionData _$$_SendTransactionDataFromJson(
+_$SendTransactionDataImpl _$$SendTransactionDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SendTransactionData(
+    _$SendTransactionDataImpl(
       txHash:
           const TransactionHashConverter().fromJson(json['txHash'] as String),
     );
 
-Map<String, dynamic> _$$_SendTransactionDataToJson(
-        _$_SendTransactionData instance) =>
+Map<String, dynamic> _$$SendTransactionDataImplToJson(
+        _$SendTransactionDataImpl instance) =>
     <String, dynamic>{
       'txHash': const TransactionHashConverter().toJson(instance.txHash),
     };
 
-_$_SendMultipleTransactionResponse _$$_SendMultipleTransactionResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_SendMultipleTransactionResponse(
-      numOfSentTxs: json['numOfSentTxs'] as int,
-      txsHashes: Map<String, String>.from(json['txsHashes'] as Map),
-    );
+_$SendMultipleTransactionResponseImpl
+    _$$SendMultipleTransactionResponseImplFromJson(Map<String, dynamic> json) =>
+        _$SendMultipleTransactionResponseImpl(
+          numOfSentTxs: json['numOfSentTxs'] as int,
+          txsHashes: Map<String, String>.from(json['txsHashes'] as Map),
+        );
 
-Map<String, dynamic> _$$_SendMultipleTransactionResponseToJson(
-        _$_SendMultipleTransactionResponse instance) =>
+Map<String, dynamic> _$$SendMultipleTransactionResponseImplToJson(
+        _$SendMultipleTransactionResponseImpl instance) =>
     <String, dynamic>{
       'numOfSentTxs': instance.numOfSentTxs,
       'txsHashes': instance.txsHashes,
     };
 
-_$_GetTransactionStatusData _$$_GetTransactionStatusDataFromJson(
+_$GetTransactionStatusDataImpl _$$GetTransactionStatusDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetTransactionStatusData(
+    _$GetTransactionStatusDataImpl(
       status: TransactionStatus.fromJson(json['status'] as String),
     );
 
-Map<String, dynamic> _$$_GetTransactionStatusDataToJson(
-        _$_GetTransactionStatusData instance) =>
+Map<String, dynamic> _$$GetTransactionStatusDataImplToJson(
+        _$GetTransactionStatusDataImpl instance) =>
     <String, dynamic>{
       'status': instance.status,
     };
 
-_$_GetTransactionInformationsWithSmartContractResultData
-    _$$_GetTransactionInformationsWithSmartContractResultDataFromJson(
+_$GetTransactionInformationsWithSmartContractResultDataImpl
+    _$$GetTransactionInformationsWithSmartContractResultDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_GetTransactionInformationsWithSmartContractResultData(
+        _$GetTransactionInformationsWithSmartContractResultDataImpl(
           data: json['data'] as String,
           fee: json['fee'] as String,
           gasLimit: const GasLimitConverter().fromJson(json['gasLimit'] as int),
@@ -75,8 +75,8 @@ _$_GetTransactionInformationsWithSmartContractResultData
         );
 
 Map<String,
-    dynamic> _$$_GetTransactionInformationsWithSmartContractResultDataToJson(
-        _$_GetTransactionInformationsWithSmartContractResultData instance) =>
+    dynamic> _$$GetTransactionInformationsWithSmartContractResultDataImplToJson(
+        _$GetTransactionInformationsWithSmartContractResultDataImpl instance) =>
     <String, dynamic>{
       'data': instance.data,
       'fee': instance.fee,
@@ -98,9 +98,9 @@ Map<String,
       'value': const BalanceConverter().toJson(instance.value),
     };
 
-_$_SmartContractResultData _$$_SmartContractResultDataFromJson(
+_$SmartContractResultDataImpl _$$SmartContractResultDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SmartContractResultData(
+    _$SmartContractResultDataImpl(
       callType: json['callType'] as String,
       data: json['data'] as String,
       gasLimit: const GasLimitConverter().fromJson(json['gasLimit'] as int),
@@ -117,8 +117,8 @@ _$_SmartContractResultData _$$_SmartContractResultDataFromJson(
       value: const BalanceConverter().fromJson(json['value'] as String),
     );
 
-Map<String, dynamic> _$$_SmartContractResultDataToJson(
-        _$_SmartContractResultData instance) =>
+Map<String, dynamic> _$$SmartContractResultDataImplToJson(
+        _$SmartContractResultDataImpl instance) =>
     <String, dynamic>{
       'callType': instance.callType,
       'data': instance.data,

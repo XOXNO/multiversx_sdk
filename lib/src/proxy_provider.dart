@@ -89,6 +89,7 @@ class ProxyProvider extends IProvider {
         receiver: transaction.receiver,
         gasPrice: transaction.gasPrice,
         gasLimit: transaction.gasLimit,
+        options: transaction.options,
         guardianSignature: transaction.guardianSignature.hex,
         guardian: transaction.guardian,
         data: base64.encode(transaction.data.bytes),

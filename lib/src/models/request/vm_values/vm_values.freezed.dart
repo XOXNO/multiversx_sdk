@@ -101,11 +101,11 @@ class _$VmValuesRequestCopyWithImpl<$Res, $Val extends VmValuesRequest>
 }
 
 /// @nodoc
-abstract class _$$_VmValuesRequestCopyWith<$Res>
+abstract class _$$VmValuesRequestImplCopyWith<$Res>
     implements $VmValuesRequestCopyWith<$Res> {
-  factory _$$_VmValuesRequestCopyWith(
-          _$_VmValuesRequest value, $Res Function(_$_VmValuesRequest) then) =
-      __$$_VmValuesRequestCopyWithImpl<$Res>;
+  factory _$$VmValuesRequestImplCopyWith(_$VmValuesRequestImpl value,
+          $Res Function(_$VmValuesRequestImpl) then) =
+      __$$VmValuesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,11 +121,11 @@ abstract class _$$_VmValuesRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VmValuesRequestCopyWithImpl<$Res>
-    extends _$VmValuesRequestCopyWithImpl<$Res, _$_VmValuesRequest>
-    implements _$$_VmValuesRequestCopyWith<$Res> {
-  __$$_VmValuesRequestCopyWithImpl(
-      _$_VmValuesRequest _value, $Res Function(_$_VmValuesRequest) _then)
+class __$$VmValuesRequestImplCopyWithImpl<$Res>
+    extends _$VmValuesRequestCopyWithImpl<$Res, _$VmValuesRequestImpl>
+    implements _$$VmValuesRequestImplCopyWith<$Res> {
+  __$$VmValuesRequestImplCopyWithImpl(
+      _$VmValuesRequestImpl _value, $Res Function(_$VmValuesRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +137,7 @@ class __$$_VmValuesRequestCopyWithImpl<$Res>
     Object? caller = freezed,
     Object? value = freezed,
   }) {
-    return _then(_$_VmValuesRequest(
+    return _then(_$VmValuesRequestImpl(
       scAddress: null == scAddress
           ? _value.scAddress
           : scAddress // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_VmValuesRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VmValuesRequest implements _VmValuesRequest {
-  _$_VmValuesRequest(
+class _$VmValuesRequestImpl implements _VmValuesRequest {
+  _$VmValuesRequestImpl(
       {@AddressConverter() required this.scAddress,
       required this.funcName,
       @ContractArgumentConverter() required final List<ContractArgument> args,
@@ -173,8 +173,8 @@ class _$_VmValuesRequest implements _VmValuesRequest {
       @NullableBalanceConverter() @JsonKey(includeIfNull: false) this.value})
       : _args = args;
 
-  factory _$_VmValuesRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_VmValuesRequestFromJson(json);
+  factory _$VmValuesRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VmValuesRequestImplFromJson(json);
 
   @override
   @AddressConverter()
@@ -208,7 +208,7 @@ class _$_VmValuesRequest implements _VmValuesRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VmValuesRequest &&
+            other is _$VmValuesRequestImpl &&
             (identical(other.scAddress, scAddress) ||
                 other.scAddress == scAddress) &&
             (identical(other.funcName, funcName) ||
@@ -226,12 +226,13 @@ class _$_VmValuesRequest implements _VmValuesRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VmValuesRequestCopyWith<_$_VmValuesRequest> get copyWith =>
-      __$$_VmValuesRequestCopyWithImpl<_$_VmValuesRequest>(this, _$identity);
+  _$$VmValuesRequestImplCopyWith<_$VmValuesRequestImpl> get copyWith =>
+      __$$VmValuesRequestImplCopyWithImpl<_$VmValuesRequestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VmValuesRequestToJson(
+    return _$$VmValuesRequestImplToJson(
       this,
     );
   }
@@ -247,10 +248,10 @@ abstract class _VmValuesRequest implements VmValuesRequest {
       final Address? caller,
       @NullableBalanceConverter()
       @JsonKey(includeIfNull: false)
-      final Balance? value}) = _$_VmValuesRequest;
+      final Balance? value}) = _$VmValuesRequestImpl;
 
   factory _VmValuesRequest.fromJson(Map<String, dynamic> json) =
-      _$_VmValuesRequest.fromJson;
+      _$VmValuesRequestImpl.fromJson;
 
   @override
   @AddressConverter()
@@ -270,6 +271,6 @@ abstract class _VmValuesRequest implements VmValuesRequest {
   Balance? get value;
   @override
   @JsonKey(ignore: true)
-  _$$_VmValuesRequestCopyWith<_$_VmValuesRequest> get copyWith =>
+  _$$VmValuesRequestImplCopyWith<_$VmValuesRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
