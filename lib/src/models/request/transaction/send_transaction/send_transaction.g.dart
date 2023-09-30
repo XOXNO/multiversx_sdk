@@ -13,6 +13,8 @@ _$_SendTransactionRequest _$$_SendTransactionRequestFromJson(
       value: const BalanceConverter().fromJson(json['value'] as String),
       receiver: const AddressConverter().fromJson(json['receiver'] as String),
       sender: const AddressConverter().fromJson(json['sender'] as String),
+      guardian: const NullableAddressConverter()
+          .fromJson(json['guardian'] as String?),
       gasPrice: const GasPriceConverter().fromJson(json['gasPrice'] as int),
       gasLimit: const GasLimitConverter().fromJson(json['gasLimit'] as int),
       version:
@@ -21,6 +23,7 @@ _$_SendTransactionRequest _$$_SendTransactionRequestFromJson(
       chainId:
           const NullableChainIdConverter().fromJson(json['chainID'] as String?),
       signature: json['signature'] as String,
+      guardianSignature: json['guardianSignature'] as String?,
     );
 
 Map<String, dynamic> _$$_SendTransactionRequestToJson(
@@ -37,11 +40,13 @@ Map<String, dynamic> _$$_SendTransactionRequestToJson(
   val['value'] = const BalanceConverter().toJson(instance.value);
   val['receiver'] = const AddressConverter().toJson(instance.receiver);
   val['sender'] = const AddressConverter().toJson(instance.sender);
+  val['guardian'] = const NullableAddressConverter().toJson(instance.guardian);
   val['gasPrice'] = const GasPriceConverter().toJson(instance.gasPrice);
   val['gasLimit'] = const GasLimitConverter().toJson(instance.gasLimit);
   val['version'] = const TransactionVersionConverter().toJson(instance.version);
   writeNotNull('data', instance.data);
   val['chainID'] = const NullableChainIdConverter().toJson(instance.chainId);
   val['signature'] = instance.signature;
+  val['guardianSignature'] = instance.guardianSignature;
   return val;
 }

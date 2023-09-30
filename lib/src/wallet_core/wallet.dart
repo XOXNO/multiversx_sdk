@@ -54,7 +54,7 @@ class Wallet {
       chainId: networkConfiguration.chainId,
       gasLimit: networkConfiguration.minGasLimit,
       gasPrice: networkConfiguration.minGasPrice,
-      transactionVersion: networkConfiguration.minTransactionVersion,
+      version: networkConfiguration.minTransactionVersion,
       data: TransactionPayload.empty(),
       signature: Signature.empty(),
       nonce: _account.nonce,

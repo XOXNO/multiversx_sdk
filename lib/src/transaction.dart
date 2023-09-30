@@ -53,12 +53,14 @@ class Transaction extends ISignable {
   final Balance balance;
   final Address sender;
   final Address receiver;
+  final Address? guardian;
   final GasPrice gasPrice;
   final GasLimit gasLimit;
   final TransactionPayload data;
   final ChainId chainId;
-  final TransactionVersion transactionVersion;
+  final TransactionVersion version;
   final Signature signature;
+  final Signature guardianSignature;
   final TransactionHash? transactionHash;
 
   Transaction({
@@ -70,8 +72,10 @@ class Transaction extends ISignable {
     required this.gasLimit,
     required this.data,
     required this.chainId,
-    required this.transactionVersion,
+    required this.version,
     this.signature = const Signature.empty(),
+    this.guardianSignature = const Signature.empty(),
+    this.guardian,
     this.transactionHash,
   });
 
@@ -94,7 +98,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -117,7 +121,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(250000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -140,7 +144,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -163,7 +167,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -186,7 +190,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -209,7 +213,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -232,7 +236,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -255,7 +259,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -278,7 +282,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -301,7 +305,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -324,7 +328,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(50000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -347,7 +351,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(700511) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -371,7 +375,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(700511) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -395,7 +399,7 @@ class Transaction extends ISignable {
         gasLimit: GasLimit(5000000) + gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -411,9 +415,15 @@ class Transaction extends ISignable {
       map['data'] = base64.encode(data.bytes);
     }
     map['chainID'] = chainId.value;
-    map['version'] = transactionVersion.value;
+    map['version'] = version.value;
     if (signature.hex.isNotEmpty) {
       map['signature'] = signature.hex;
+    }
+    if (guardian != null) {
+      map['guardian'] = guardian!.bech32;
+    }
+    if (guardianSignature.hex.isNotEmpty) {
+      map['guardianSignature'] = guardianSignature.hex;
     }
     return map;
   }
@@ -421,6 +431,9 @@ class Transaction extends ISignable {
   Transaction copyWith(
           {Signature? newSignature,
           TransactionHash? newTransactionHash,
+          TransactionVersion? newVersion,
+          Signature? newGuardianSignature,
+          Address? newGuardian,
           Address? newSender}) =>
       Transaction(
         nonce: nonce,
@@ -431,7 +444,7 @@ class Transaction extends ISignable {
         gasLimit: gasLimit,
         data: data,
         chainId: chainId,
-        transactionVersion: transactionVersion,
+        version: newVersion ?? version,
         signature: newSignature ?? signature,
         transactionHash: newTransactionHash ?? transactionHash,
       );
@@ -443,6 +456,14 @@ class Transaction extends ISignable {
   @override
   Transaction applySignature(Signature signature, Address signedBy) =>
       copyWith(newSignature: signature, newSender: signedBy);
+
+  Transaction setVersion(TransactionVersion version) =>
+      copyWith(newVersion: version);
+
+  Transaction applyGuardianSignature(Signature signature) =>
+      copyWith(newGuardianSignature: signature);
+
+  Transaction setGuardian(Address guardian) => copyWith(newGuardian: guardian);
 }
 
 class TransactionHash {

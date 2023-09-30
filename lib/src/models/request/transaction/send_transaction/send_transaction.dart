@@ -17,12 +17,14 @@ class SendTransactionRequest with _$SendTransactionRequest {
     @BalanceConverter() required Balance value,
     @AddressConverter() required Address receiver,
     @AddressConverter() required Address sender,
+    @NullableAddressConverter() Address? guardian,
     @GasPriceConverter() required GasPrice gasPrice,
     @GasLimitConverter() required GasLimit gasLimit,
     @TransactionVersionConverter() required TransactionVersion version,
     @JsonKey(includeIfNull: false) String? data,
     @NullableChainIdConverter() @JsonKey(name: 'chainID') ChainId? chainId,
     required String signature,
+    required String? guardianSignature,
   }) = _SendTransactionRequest;
 
   factory SendTransactionRequest.fromJson(Map<String, dynamic> json) =>

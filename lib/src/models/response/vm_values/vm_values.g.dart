@@ -21,7 +21,7 @@ _$_VmValueData _$$_VmValueDataFromJson(Map<String, dynamic> json) =>
       returnData: (json['returnData'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
-          [],
+          const [],
       returnCode: json['returnCode'] as String,
       returnMessage: json['returnMessage'] as String,
       gasRemaining: (json['gasRemaining'] as num).toDouble(),

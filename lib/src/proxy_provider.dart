@@ -81,7 +81,7 @@ class ProxyProvider extends IProvider {
     }
     try {
       final request = SendTransactionRequest(
-        version: transaction.transactionVersion,
+        version: transaction.version,
         chainId: transaction.chainId,
         nonce: transaction.nonce,
         value: transaction.balance,
@@ -89,6 +89,8 @@ class ProxyProvider extends IProvider {
         receiver: transaction.receiver,
         gasPrice: transaction.gasPrice,
         gasLimit: transaction.gasLimit,
+        guardianSignature: transaction.guardianSignature.hex,
+        guardian: transaction.guardian,
         data: base64.encode(transaction.data.bytes),
         signature: transaction.signature.hex,
       );
