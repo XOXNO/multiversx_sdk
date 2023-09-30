@@ -14,7 +14,6 @@ _$ProxyResponseGenericImpl _$$ProxyResponseGenericImplFromJson(
       ),
       error: json['error'] as String?,
       code: json['code'] as String,
-      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$ProxyResponseGenericImplToJson(
@@ -23,7 +22,6 @@ Map<String, dynamic> _$$ProxyResponseGenericImplToJson(
       'data': instance.data,
       'error': instance.error,
       'code': instance.code,
-      'runtimeType': instance.$type,
     };
 
 _$GetAccountInformationResponseImpl
@@ -32,7 +30,6 @@ _$GetAccountInformationResponseImpl
           data: AccountResponse.fromJson(json['data'] as Map<String, dynamic>),
           error: json['error'] as String?,
           code: json['code'] as String,
-          $type: json['runtimeType'] as String?,
         );
 
 Map<String, dynamic> _$$GetAccountInformationResponseImplToJson(
@@ -41,7 +38,6 @@ Map<String, dynamic> _$$GetAccountInformationResponseImplToJson(
       'data': instance.data,
       'error': instance.error,
       'code': instance.code,
-      'runtimeType': instance.$type,
     };
 
 _$NetworkConfigurationResponseImpl _$$NetworkConfigurationResponseImplFromJson(
@@ -51,7 +47,6 @@ _$NetworkConfigurationResponseImpl _$$NetworkConfigurationResponseImplFromJson(
           json['data'] as Map<String, dynamic>),
       error: json['error'] as String?,
       code: json['code'] as String,
-      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$NetworkConfigurationResponseImplToJson(
@@ -60,7 +55,6 @@ Map<String, dynamic> _$$NetworkConfigurationResponseImplToJson(
       'data': instance.data,
       'error': instance.error,
       'code': instance.code,
-      'runtimeType': instance.$type,
     };
 
 _$SendTransactionResponseImpl _$$SendTransactionResponseImplFromJson(
@@ -69,7 +63,6 @@ _$SendTransactionResponseImpl _$$SendTransactionResponseImplFromJson(
       data: SendTransactionData.fromJson(json['data'] as Map<String, dynamic>),
       error: json['error'] as String?,
       code: json['code'] as String,
-      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$SendTransactionResponseImplToJson(
@@ -78,7 +71,6 @@ Map<String, dynamic> _$$SendTransactionResponseImplToJson(
       'data': instance.data,
       'error': instance.error,
       'code': instance.code,
-      'runtimeType': instance.$type,
     };
 
 _$GetTransactionStatusResponseImpl _$$GetTransactionStatusResponseImplFromJson(
@@ -88,7 +80,6 @@ _$GetTransactionStatusResponseImpl _$$GetTransactionStatusResponseImplFromJson(
           json['data'] as Map<String, dynamic>),
       error: json['error'] as String?,
       code: json['code'] as String,
-      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$GetTransactionStatusResponseImplToJson(
@@ -97,7 +88,6 @@ Map<String, dynamic> _$$GetTransactionStatusResponseImplToJson(
       'data': instance.data,
       'error': instance.error,
       'code': instance.code,
-      'runtimeType': instance.$type,
     };
 
 _$GetTransactionInformationsWithSmartContractResultsResponseImpl
@@ -108,7 +98,6 @@ _$GetTransactionInformationsWithSmartContractResultsResponseImpl
               json['data'] as Map<String, dynamic>),
           error: json['error'] as String?,
           code: json['code'] as String,
-          $type: json['runtimeType'] as String?,
         );
 
 Map<String, dynamic>
@@ -119,7 +108,6 @@ Map<String, dynamic>
           'data': instance.data,
           'error': instance.error,
           'code': instance.code,
-          'runtimeType': instance.$type,
         };
 
 _$VmValuesQueryImpl _$$VmValuesQueryImplFromJson(Map<String, dynamic> json) =>
@@ -127,7 +115,6 @@ _$VmValuesQueryImpl _$$VmValuesQueryImplFromJson(Map<String, dynamic> json) =>
       data: VmValuesResponse.fromJson(json['data'] as Map<String, dynamic>),
       error: json['error'] as String?,
       code: json['code'] as String,
-      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$VmValuesQueryImplToJson(_$VmValuesQueryImpl instance) =>
@@ -135,5 +122,4 @@ Map<String, dynamic> _$$VmValuesQueryImplToJson(_$VmValuesQueryImpl instance) =>
       'data': instance.data,
       'error': instance.error,
       'code': instance.code,
-      'runtimeType': instance.$type,
     };

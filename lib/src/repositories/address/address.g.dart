@@ -21,13 +21,14 @@ class _AddressRepository implements AddressRepository {
   String? baseUrl;
 
   @override
-  Future<InvalidType> addressInformations(dynamic address) async {
+  Future<GetAccountInformationResponse> addressInformations(
+      dynamic address) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<InvalidType>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<GetAccountInformationResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -43,7 +44,7 @@ class _AddressRepository implements AddressRepository {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = InvalidType.fromJson(_result.data!);
+    final value = GetAccountInformationResponse.fromJson(_result.data!);
     return value;
   }
 

@@ -21,13 +21,13 @@ class _TransactionRepository implements TransactionRepository {
   String? baseUrl;
 
   @override
-  Future<InvalidType> send(SendTransactionRequest request) async {
+  Future<SendTransactionResponse> send(SendTransactionRequest request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<InvalidType>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<SendTransactionResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -43,7 +43,7 @@ class _TransactionRepository implements TransactionRepository {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = InvalidType.fromJson(_result.data!);
+    final value = SendTransactionResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -76,13 +76,13 @@ class _TransactionRepository implements TransactionRepository {
   }
 
   @override
-  Future<InvalidType> simulate(SendTransactionRequest request) async {
+  Future<ProxyResponseGeneric> simulate(SendTransactionRequest request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<InvalidType>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ProxyResponseGeneric>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -98,18 +98,18 @@ class _TransactionRepository implements TransactionRepository {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = InvalidType.fromJson(_result.data!);
+    final value = ProxyResponseGeneric.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<InvalidType> cost(TransactionCostRequest request) async {
+  Future<ProxyResponseGeneric> cost(TransactionCostRequest request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<InvalidType>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ProxyResponseGeneric>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -125,18 +125,18 @@ class _TransactionRepository implements TransactionRepository {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = InvalidType.fromJson(_result.data!);
+    final value = ProxyResponseGeneric.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<InvalidType> transactionStatus(String txHash) async {
+  Future<GetTransactionStatusResponse> transactionStatus(String txHash) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<InvalidType>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<GetTransactionStatusResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -152,7 +152,7 @@ class _TransactionRepository implements TransactionRepository {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = InvalidType.fromJson(_result.data!);
+    final value = GetTransactionStatusResponse.fromJson(_result.data!);
     return value;
   }
 

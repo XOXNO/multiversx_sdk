@@ -21,13 +21,13 @@ class _VmValuesRepository implements VmValuesRepository {
   String? baseUrl;
 
   @override
-  Future<InvalidType> query(VmValuesRequest request) async {
+  Future<VmValuesQuery> query(VmValuesRequest request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<InvalidType>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<VmValuesQuery>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -43,7 +43,7 @@ class _VmValuesRepository implements VmValuesRepository {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = InvalidType.fromJson(_result.data!);
+    final value = VmValuesQuery.fromJson(_result.data!);
     return value;
   }
 

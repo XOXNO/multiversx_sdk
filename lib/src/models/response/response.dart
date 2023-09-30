@@ -8,49 +8,88 @@ part 'response.freezed.dart';
 part 'response.g.dart';
 
 @freezed
-class ProxyResponse with _$ProxyResponse {
-  factory ProxyResponse({
+class ProxyResponseGeneric with _$ProxyResponseGeneric {
+  factory ProxyResponseGeneric({
     required Map<String, Object> data,
     String? error,
     required String code,
-  }) = ProxyResponseGeneric;
+  }) = _ProxyResponseGeneric;
 
-  factory ProxyResponse.getAccountInformation({
+  factory ProxyResponseGeneric.fromJson(Map<String, dynamic> json) =>
+      _$ProxyResponseGenericFromJson(json);
+}
+
+@freezed
+class GetAccountInformationResponse with _$GetAccountInformationResponse {
+  factory GetAccountInformationResponse({
     required AccountResponse data,
     String? error,
     required String code,
-  }) = GetAccountInformationResponse;
+  }) = _GetAccountInformationResponse;
 
-  factory ProxyResponse.networkConfiguration({
+  factory GetAccountInformationResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetAccountInformationResponseFromJson(json);
+}
+
+@freezed
+class NetworkConfigurationResponse with _$NetworkConfigurationResponse {
+  factory NetworkConfigurationResponse({
     required NetworkConfigurationData data,
     String? error,
     required String code,
-  }) = NetworkConfigurationResponse;
+  }) = _NetworkConfigurationResponse;
 
-  factory ProxyResponse.sendTransaction({
+  factory NetworkConfigurationResponse.fromJson(Map<String, dynamic> json) =>
+      _$NetworkConfigurationResponseFromJson(json);
+}
+
+@freezed
+class SendTransactionResponse with _$SendTransactionResponse {
+  factory SendTransactionResponse({
     required SendTransactionData data,
     String? error,
     required String code,
-  }) = SendTransactionResponse;
+  }) = _SendTransactionResponse;
 
-  factory ProxyResponse.getTransactionStatus({
+  factory SendTransactionResponse.fromJson(Map<String, dynamic> json) =>
+      _$SendTransactionResponseFromJson(json);
+}
+
+@freezed
+class GetTransactionStatusResponse with _$GetTransactionStatusResponse {
+  factory GetTransactionStatusResponse({
     required GetTransactionStatusData data,
     String? error,
     required String code,
-  }) = GetTransactionStatusResponse;
+  }) = _GetTransactionStatusResponse;
 
-  factory ProxyResponse.informationsWithSmartContractResults({
+  factory GetTransactionStatusResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetTransactionStatusResponseFromJson(json);
+}
+
+@freezed
+class GetTransactionInformationsWithSmartContractResultsResponse
+    with _$GetTransactionInformationsWithSmartContractResultsResponse {
+  factory GetTransactionInformationsWithSmartContractResultsResponse({
     required GetTransactionInformationsWithSmartContractResultData data,
     String? error,
     required String code,
-  }) = GetTransactionInformationsWithSmartContractResultsResponse;
+  }) = _GetTransactionInformationsWithSmartContractResultsResponse;
 
-  factory ProxyResponse.vmValuesQuery({
+  factory GetTransactionInformationsWithSmartContractResultsResponse.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetTransactionInformationsWithSmartContractResultsResponseFromJson(
+          json);
+}
+
+@freezed
+class VmValuesQuery with _$VmValuesQuery {
+  factory VmValuesQuery({
     required VmValuesResponse data,
     String? error,
     required String code,
-  }) = VmValuesQuery;
+  }) = _VmValuesQuery;
 
-  factory ProxyResponse.fromJson(Map<String, dynamic> json) =>
-      _$ProxyResponseFromJson(json);
+  factory VmValuesQuery.fromJson(Map<String, dynamic> json) =>
+      _$VmValuesQueryFromJson(json);
 }
