@@ -80,7 +80,6 @@ class Wallet {
         gasPerDataByte: networkConfiguration.gasPerDataByte,
         minGasLimit: networkConfiguration.minGasLimit.value,
       ),
-      transactionVersion: networkConfiguration.minTransactionVersion,
       data: payload,
       nonce: _account.nonce,
       sender: _account.address,
