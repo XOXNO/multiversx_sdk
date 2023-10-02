@@ -54,13 +54,13 @@ class Transaction extends ISignable {
   final Address sender;
   final Address receiver;
   final Address? guardian;
-  final GasPrice gasPrice;
+  final GasPrice? gasPrice;
   final GasLimit gasLimit;
-  final TransactionPayload data;
+  final TransactionPayload? data;
   final ChainId chainId;
-  final TransactionVersion version;
+  final TransactionVersion? version;
   final Signature signature;
-  final Signature guardianSignature;
+  final Signature? guardianSignature;
   final TransactionHash? transactionHash;
   final int? options;
 
@@ -69,11 +69,11 @@ class Transaction extends ISignable {
     required this.balance,
     required this.sender,
     required this.receiver,
-    required this.gasPrice,
+    this.gasPrice = const GasPrice(1000000000),
     required this.gasLimit,
-    required this.data,
+    this.data = const TransactionPayload([]),
     required this.chainId,
-    required this.version,
+    this.version = const TransactionVersion(1),
     this.signature = const Signature.empty(),
     this.options,
     this.guardianSignature = const Signature.empty(),
@@ -104,26 +104,22 @@ class Transaction extends ISignable {
         signature: Signature.empty(),
       );
 
-  factory Transaction.esdtTransfert({
+  factory Transaction.esdtTransfer({
     required Nonce nonce,
     required Address sender,
     required Address receiver,
-    required GasPrice gasPrice,
     required GasLimit gasLimit,
     required TransactionPayload data,
     required ChainId chainId,
-    required TransactionVersion transactionVersion,
   }) =>
       Transaction(
         nonce: nonce,
         balance: Balance.fromEgld(0),
         sender: sender,
         receiver: receiver,
-        gasPrice: gasPrice,
         gasLimit: GasLimit(250000) + gasLimit,
         data: data,
         chainId: chainId,
-        version: transactionVersion,
         signature: Signature.empty(),
       );
 
@@ -288,7 +284,7 @@ class Transaction extends ISignable {
         signature: Signature.empty(),
       );
 
-  factory Transaction.esdtTransfertOwnership({
+  factory Transaction.esdtTransferOwnership({
     required Nonce nonce,
     required Address sender,
     required GasPrice gasPrice,
@@ -411,13 +407,13 @@ class Transaction extends ISignable {
     map['value'] = balance.value.toString();
     map['receiver'] = receiver.bech32;
     map['sender'] = signedBy?.bech32 ?? sender.bech32;
-    map['gasPrice'] = gasPrice.value;
+    map['gasPrice'] = gasPrice?.value ?? GasPrice(1000000000).value;
     map['gasLimit'] = gasLimit.value;
-    if (data.bytes.isNotEmpty) {
-      map['data'] = base64.encode(data.bytes);
+    if (data != null && data!.bytes.isNotEmpty) {
+      map['data'] = base64.encode(data!.bytes);
     }
     map['chainID'] = chainId.value;
-    map['version'] = version.value;
+    map['version'] = version?.value ?? 1;
 
     if (options != null) {
       map['options'] = options;
@@ -428,8 +424,8 @@ class Transaction extends ISignable {
     if (guardian != null) {
       map['guardian'] = guardian!.bech32;
     }
-    if (guardianSignature.hex.isNotEmpty) {
-      map['guardianSignature'] = guardianSignature.hex;
+    if (guardianSignature != null && guardianSignature!.hex.isNotEmpty) {
+      map['guardianSignature'] = guardianSignature!.hex;
     }
     return map;
   }

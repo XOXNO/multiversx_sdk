@@ -1,20 +1,11 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:multiversx_sdk/src/account.dart';
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/interface.dart';
+import 'package:multiversx_sdk/multiversx.dart';
 import 'package:multiversx_sdk/src/models/request/transaction/send_transaction/send_transaction.dart';
 import 'package:multiversx_sdk/src/models/request/vm_values/vm_values.dart';
 import 'package:multiversx_sdk/src/models/response/response.dart';
 import 'package:multiversx_sdk/src/models/response/transaction/transaction.dart';
-import 'package:multiversx_sdk/src/network_configuration.dart';
-import 'package:multiversx_sdk/src/repositories/address/address.dart';
-import 'package:multiversx_sdk/src/repositories/network/network.dart';
-import 'package:multiversx_sdk/src/repositories/repositories.dart';
-import 'package:multiversx_sdk/src/repositories/transaction/transaction.dart';
-import 'package:multiversx_sdk/src/repositories/vm_values/vm_values.dart';
-import 'package:multiversx_sdk/src/transaction.dart';
 
 class ProxyProvider extends IProvider {
   final AddressRepository? addressRepository;
@@ -81,18 +72,18 @@ class ProxyProvider extends IProvider {
     }
     try {
       final request = SendTransactionRequest(
-        version: transaction.version,
+        version: transaction.version ?? TransactionVersion(1),
         chainId: transaction.chainId,
         nonce: transaction.nonce,
         value: transaction.balance,
         sender: transaction.sender,
         receiver: transaction.receiver,
-        gasPrice: transaction.gasPrice,
+        gasPrice: transaction.gasPrice ?? GasPrice(1000000000),
         gasLimit: transaction.gasLimit,
         options: transaction.options,
-        guardianSignature: transaction.guardianSignature.hex,
+        guardianSignature: transaction.guardianSignature?.hex,
         guardian: transaction.guardian,
-        data: base64.encode(transaction.data.bytes),
+        data: base64.encode(transaction.data?.bytes ?? []),
         signature: transaction.signature.hex,
       );
       final response = await _transactionRepository.send(request);

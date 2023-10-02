@@ -72,15 +72,14 @@ class Wallet {
     required Balance amount,
   }) async {
     final networkConfiguration = await provider.getNetworkConfiguration();
-    final payload = TransactionPayload.esdtTransfert(identifier, amount);
-    final transaction = Transaction.esdtTransfert(
+    final payload = TransactionPayload.esdtTransfer(identifier, amount);
+    final transaction = Transaction.esdtTransfer(
       chainId: networkConfiguration.chainId,
       gasLimit: GasLimit.forTransfert(
         data: payload,
         gasPerDataByte: networkConfiguration.gasPerDataByte,
         minGasLimit: networkConfiguration.minGasLimit.value,
       ),
-      gasPrice: networkConfiguration.minGasPrice,
       transactionVersion: networkConfiguration.minTransactionVersion,
       data: payload,
       nonce: _account.nonce,

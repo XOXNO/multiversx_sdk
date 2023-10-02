@@ -126,11 +126,33 @@ class TransactionPayload {
         arguments: arguments);
   }
 
-  factory TransactionPayload.esdtTransfert(
+  factory TransactionPayload.esdtTransfer(
     String identifier,
     Balance balance, {
     String methodName = '',
     List<String> arguments = const [],
+  }) {
+    final amount = balance.value.toRadixString(16);
+    final _arguments = [
+      convert.hex.encode(utf8.encode(identifier)),
+      amount.length % 2 == 0 ? amount : '0$amount',
+      if (methodName.isNotEmpty) convert.hex.encode(utf8.encode(methodName)),
+      if (arguments.isNotEmpty)
+        ...arguments
+            .map((element) => convert.hex.encode(utf8.encode(element)))
+            .toList()
+    ];
+    return _payloadFromCommandAndArguments('ESDTTransfer',
+        arguments: _arguments);
+  }
+
+  factory TransactionPayload.nftTransfer(
+    String identifier,
+    int nonce,
+    Address address,
+    Balance balance, {
+    String methodName = '',
+    List<dynamic> arguments = const [],
   }) {
     final amount = balance.value.toRadixString(16);
     final _arguments = [
@@ -202,7 +224,7 @@ class TransactionPayload {
     return _payloadFromCommandAndArguments('wipe', arguments: _arguments);
   }
 
-  factory TransactionPayload.esdtTransfertOwnership(
+  factory TransactionPayload.esdtTransferOwnership(
       String identifier, Address address) {
     final _arguments = [
       convert.hex.encode(utf8.encode(identifier)),
