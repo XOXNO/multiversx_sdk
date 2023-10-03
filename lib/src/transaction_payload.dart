@@ -163,17 +163,17 @@ class TransactionPayload {
         arguments: _arguments);
   }
 
-  factory TransactionPayload.customTransfer(
-    String methodName, {
-    List<dynamic> arguments = const [],
-  }) {
-    final _arguments = [
-      if (arguments.isNotEmpty)
-        ...arguments.map((element) => _convertType(element)).toList()
-    ];
-    return _payloadFromCommandAndArguments(methodName,
-        arguments: _arguments);
-  }
+  // factory TransactionPayload.customTransfer(
+  //   String methodName, {
+  //   List<dynamic> arguments = const [],
+  // }) {
+  //   final _arguments = [
+  //     if (arguments.isNotEmpty)
+  //       ...arguments.map((element) => _convertType(element)).toList()
+  //   ];
+  //   return _payloadFromCommandAndArguments(methodName,
+  //       arguments: _arguments);
+  // }
 
   factory TransactionPayload.nftTransfer(
     String identifier,
