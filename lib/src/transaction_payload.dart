@@ -28,6 +28,8 @@ String _convertType(dynamic argument) {
       return hex_number.length % 2 == 0 ? hex_number : '0$hex_number';
     case String:
       return convert.hex.encode(utf8.encode(argument));
+    case Address:
+      return (argument as Address).hex;
     case bool:
       return (argument as bool) ? '01' : '00';
     default:

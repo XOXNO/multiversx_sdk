@@ -30,6 +30,8 @@ class Address {
 
   String get bech32 => b32.encode(hrp, b32.toWords(pubkey));
 
+  String get hex => convert.hex.encode(_bytes);
+
   List<int> get pubkey => _bytes;
 
   @override
