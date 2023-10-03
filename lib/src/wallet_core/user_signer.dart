@@ -1,9 +1,9 @@
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/interface.dart';
-import 'package:multiversx_sdk/src/signable_message.dart';
-import 'package:multiversx_sdk/src/signature.dart';
-import 'package:multiversx_sdk/src/transaction.dart';
-import 'package:multiversx_sdk/src/wallet_core/user_keys.dart';
+import '/src/address.dart';
+import '/src/interface.dart';
+import '/src/signable_message.dart';
+import '/src/signature.dart';
+import '/src/transaction.dart';
+import '/src/wallet_core/user_keys.dart';
 
 class UserSigner extends ISigner {
   final UserSecretKey secretKey;

@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:multiversx_sdk/src/models/request/transaction/cost/cost.dart';
-import 'package:multiversx_sdk/src/models/request/transaction/send_transaction/send_transaction.dart';
-import 'package:multiversx_sdk/src/models/response/response.dart';
-import 'package:multiversx_sdk/src/models/response/transaction/transaction.dart';
+import '/src/models/request/transaction/cost/cost.dart';
+import '/src/models/request/transaction/send_transaction/send_transaction.dart';
+import '/src/models/response/response.dart';
+import '/src/models/response/transaction/transaction.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'transaction.g.dart';

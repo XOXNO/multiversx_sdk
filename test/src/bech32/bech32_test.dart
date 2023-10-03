@@ -1,4 +1,4 @@
-import 'package:multiversx_sdk/src/bech32/bech32.dart';
+import '../../../lib/src/bech32/bech32.dart';
 import 'package:test/test.dart';
 import 'package:convert/convert.dart' as convert;
 

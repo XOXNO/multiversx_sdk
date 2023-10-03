@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:multiversx_sdk/src/models/request/vm_values/vm_values.dart';
+import '/src/models/request/vm_values/vm_values.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:multiversx_sdk/src/models/response/response.dart';
+import '/src/models/response/response.dart';
 
 part 'vm_values.g.dart';
 

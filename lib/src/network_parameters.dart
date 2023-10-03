@@ -1,5 +1,5 @@
-import 'package:multiversx_sdk/src/network_configuration.dart';
-import 'package:multiversx_sdk/src/transaction_payload.dart';
+import '/src/network_configuration.dart';
+import '/src/transaction_payload.dart';
 
 class GasPrice {
   final int value;

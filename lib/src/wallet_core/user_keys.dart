@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/signable_message.dart';
-import 'package:multiversx_sdk/src/signature.dart';
+import '/src/address.dart';
+import '/src/signable_message.dart';
+import '/src/signature.dart';
 import 'package:pinenacl/ed25519.dart' as ed25519;
 import 'package:convert/convert.dart' as convert;
 

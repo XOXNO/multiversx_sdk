@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:multiversx_sdk/src/interface.dart';
-import 'package:multiversx_sdk/src/transaction.dart';
+import '/src/interface.dart';
+import '/src/transaction.dart';
 
 class TransactionWatcher {
   final TransactionHash hash;

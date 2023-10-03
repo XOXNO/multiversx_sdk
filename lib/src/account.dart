@@ -1,7 +1,7 @@
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/balance.dart';
-import 'package:multiversx_sdk/src/interface.dart';
-import 'package:multiversx_sdk/src/nonce.dart';
+import '/src/address.dart';
+import '/src/balance.dart';
+import '/src/interface.dart';
+import '/src/nonce.dart';
 
 class Account {
   final Address address;

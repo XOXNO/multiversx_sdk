@@ -1,4 +1,4 @@
-import 'package:multiversx_sdk/src/network_parameters.dart';
+import '/src/network_parameters.dart';
 
 const defaultChainId = 'T';
 const defaultGasPerDataByte = 1500;

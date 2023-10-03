@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 
-import 'package:multiversx_sdk/multiversx.dart';
-
+import '../lib/multiversx.dart';
 import 'seed.dart';
 
 void main(List<String> arguments) async {

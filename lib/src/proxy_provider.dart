@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:multiversx_sdk/multiversx.dart';
-import 'package:multiversx_sdk/src/models/request/transaction/send_transaction/send_transaction.dart';
-import 'package:multiversx_sdk/src/models/request/vm_values/vm_values.dart';
-import 'package:multiversx_sdk/src/models/response/response.dart';
-import 'package:multiversx_sdk/src/models/response/transaction/transaction.dart';
+import '/multiversx.dart';
+import '/src/models/request/transaction/send_transaction/send_transaction.dart';
+import '/src/models/request/vm_values/vm_values.dart';
+import '/src/models/response/response.dart';
+import '/src/models/response/transaction/transaction.dart';
 
 class ProxyProvider extends IProvider {
   final AddressRepository? addressRepository;

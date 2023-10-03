@@ -1,9 +1,9 @@
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/balance.dart';
-import 'package:multiversx_sdk/src/models/json_converter.dart';
-import 'package:multiversx_sdk/src/network_parameters.dart';
-import 'package:multiversx_sdk/src/nonce.dart';
-import 'package:multiversx_sdk/src/transaction.dart';
+import '/src/address.dart';
+import '/src/balance.dart';
+import '/src/models/json_converter.dart';
+import '/src/network_parameters.dart';
+import '/src/nonce.dart';
+import '/src/transaction.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'transaction.freezed.dart';

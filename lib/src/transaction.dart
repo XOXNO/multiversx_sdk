@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/balance.dart';
-import 'package:multiversx_sdk/src/interface.dart';
-import 'package:multiversx_sdk/src/network_parameters.dart';
-import 'package:multiversx_sdk/src/nonce.dart';
-import 'package:multiversx_sdk/src/signature.dart';
-import 'package:multiversx_sdk/src/transaction_payload.dart';
+import '/src/address.dart';
+import '/src/balance.dart';
+import '/src/interface.dart';
+import '/src/network_parameters.dart';
+import '/src/nonce.dart';
+import '/src/signature.dart';
+import '/src/transaction_payload.dart';
 
 class TransactionStatus {
   static const success = TransactionStatus._('success');

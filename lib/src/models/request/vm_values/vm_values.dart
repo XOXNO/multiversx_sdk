@@ -1,9 +1,9 @@
 // ignore_for_file: invalid_annotation_target
 
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/balance.dart';
-import 'package:multiversx_sdk/src/models/json_converter.dart';
-import 'package:multiversx_sdk/src/smart_contract/argument.dart';
+import '/src/address.dart';
+import '/src/balance.dart';
+import '/src/models/json_converter.dart';
+import '/src/smart_contract/argument.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'vm_values.freezed.dart';

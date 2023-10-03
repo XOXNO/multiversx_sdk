@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:multiversx_sdk/src/models/response/response.dart';
+import '/src/models/response/response.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'address.g.dart';

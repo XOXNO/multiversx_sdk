@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:convert/convert.dart' as convert;
-import 'package:multiversx_sdk/multiversx.dart';
-import 'package:multiversx_sdk/src/models/request/vm_values/vm_values.dart';
-import 'package:multiversx_sdk/src/models/response/response.dart';
-import 'package:multiversx_sdk/src/models/response/transaction/transaction.dart';
-import 'package:multiversx_sdk/src/smart_contract/argument.dart';
+import '/multiversx.dart';
+import '/src/models/request/vm_values/vm_values.dart';
+import '/src/models/response/response.dart';
+import '/src/models/response/transaction/transaction.dart';
+import '/src/smart_contract/argument.dart';
 import 'package:pointycastle/pointycastle.dart';
 
 Uint8List _int32Bytes(int value, {Endian endian = Endian.little}) =>

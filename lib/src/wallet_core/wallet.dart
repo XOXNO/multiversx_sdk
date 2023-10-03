@@ -1,17 +1,17 @@
 import 'dart:async';
 
-import 'package:multiversx_sdk/src/network_parameters.dart';
+import '/src/network_parameters.dart';
 
-import 'package:multiversx_sdk/src/account.dart';
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/balance.dart';
-import 'package:multiversx_sdk/src/interface.dart';
-import 'package:multiversx_sdk/src/signature.dart';
-import 'package:multiversx_sdk/src/transaction.dart';
-import 'package:multiversx_sdk/src/transaction_payload.dart';
-import 'package:multiversx_sdk/src/wallet_core/mnemonic.dart';
-import 'package:multiversx_sdk/src/wallet_core/user_keys.dart';
-import 'package:multiversx_sdk/src/wallet_core/user_signer.dart';
+import '/src/account.dart';
+import '/src/address.dart';
+import '/src/balance.dart';
+import '/src/interface.dart';
+import '/src/signature.dart';
+import '/src/transaction.dart';
+import '/src/transaction_payload.dart';
+import '/src/wallet_core/mnemonic.dart';
+import '/src/wallet_core/user_keys.dart';
+import '/src/wallet_core/user_signer.dart';
 
 class Wallet {
   final UserSecretKey? _secretKey;

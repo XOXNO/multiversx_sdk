@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:convert/convert.dart';
-import 'package:multiversx_sdk/src/signature.dart';
+import '/src/signature.dart';
 import 'dart:typed_data';
 
 import 'package:pointycastle/export.dart' as pointy;

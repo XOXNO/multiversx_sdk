@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:multiversx_sdk/multiversx.dart';
+import '../../lib/multiversx.dart';
 
 void main(List<String> arguments) async {
   final dio = Dio();

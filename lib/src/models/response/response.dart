@@ -1,7 +1,7 @@
-import 'package:multiversx_sdk/src/models/response/address/address.dart';
-import 'package:multiversx_sdk/src/models/response/network/network.dart';
-import 'package:multiversx_sdk/src/models/response/transaction/transaction.dart';
-import 'package:multiversx_sdk/src/models/response/vm_values/vm_values.dart';
+import '/src/models/response/address/address.dart';
+import '/src/models/response/network/network.dart';
+import '/src/models/response/transaction/transaction.dart';
+import '/src/models/response/vm_values/vm_values.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'response.freezed.dart';

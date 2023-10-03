@@ -1,10 +1,10 @@
 import 'package:convert/convert.dart' as convert;
-import 'package:multiversx_sdk/src/address.dart';
-import 'package:multiversx_sdk/src/balance.dart';
-import 'package:multiversx_sdk/src/network_parameters.dart';
-import 'package:multiversx_sdk/src/nonce.dart';
-import 'package:multiversx_sdk/src/smart_contract/argument.dart';
-import 'package:multiversx_sdk/src/transaction.dart';
+import '/src/address.dart';
+import '/src/balance.dart';
+import '/src/network_parameters.dart';
+import '/src/nonce.dart';
+import '/src/smart_contract/argument.dart';
+import '/src/transaction.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 class AddressConverter implements JsonConverter<Address, String> {

@@ -1,4 +1,4 @@
-import 'package:multiversx_sdk/src/nonce.dart';
+import '../../lib/src/nonce.dart';
 import 'package:test/test.dart';
 
 void main() {
