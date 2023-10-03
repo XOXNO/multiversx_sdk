@@ -18,22 +18,22 @@ TransactionPayload _payloadFromCommandAndArguments(String command,
   return TransactionPayload(utf8.encode(sb.toString()));
 }
 
-// String _convertType(dynamic argument) {
-//   switch (argument.runtimeType) {
-//     case Balance:
-//       final amount = (argument as Balance).value.toRadixString(16);
-//       return amount.length % 2 == 0 ? amount : '0$amount';
-//     case int:
-//       final hex_number = (argument as int).toRadixString(16);
-//       return hex_number.length % 2 == 0 ? hex_number : '0$hex_number';
-//     case String:
-//       return convert.hex.encode(utf8.encode(argument));
-//     case bool:
-//       return (argument as bool) ? '01' : '00';
-//     default:
-//       throw FormatException('Unsupported type ${argument.runtimeType}');
-//   }
-// }
+String _convertType(dynamic argument) {
+  switch (argument.runtimeType) {
+    case Balance:
+      final amount = (argument as Balance).value.toRadixString(16);
+      return amount.length % 2 == 0 ? amount : '0$amount';
+    case int:
+      final hex_number = (argument as int).toRadixString(16);
+      return hex_number.length % 2 == 0 ? hex_number : '0$hex_number';
+    case String:
+      return convert.hex.encode(utf8.encode(argument));
+    case bool:
+      return (argument as bool) ? '01' : '00';
+    default:
+      throw FormatException('Unsupported type ${argument.runtimeType}');
+  }
+}
 
 class TransactionPayload {
   final List<int> bytes;
@@ -163,17 +163,16 @@ class TransactionPayload {
         arguments: _arguments);
   }
 
-  // factory TransactionPayload.customTransfer(
-  //   String methodName, {
-  //   List<dynamic> arguments = const [],
-  // }) {
-  //   final _arguments = [
-  //     if (arguments.isNotEmpty)
-  //       ...arguments.map((element) => _convertType(element)).toList()
-  //   ];
-  //   return _payloadFromCommandAndArguments(methodName,
-  //       arguments: _arguments);
-  // }
+  factory TransactionPayload.customTransfer(
+    String methodName, {
+    List<dynamic> arguments = const [],
+  }) {
+    final _arguments = [
+      if (arguments.isNotEmpty)
+        ...arguments.map((element) => _convertType(element)).toList()
+    ];
+    return _payloadFromCommandAndArguments(methodName, arguments: _arguments);
+  }
 
   factory TransactionPayload.nftTransfer(
     String identifier,
