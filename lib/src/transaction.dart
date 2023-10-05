@@ -449,6 +449,8 @@ class Transaction extends ISignable {
         chainId: chainId,
         version: newVersion ?? version,
         signature: newSignature ?? signature,
+        guardian: newGuardian ?? guardian,
+        guardianSignature: newGuardianSignature ?? guardianSignature,
         options: newOptions ?? options,
         transactionHash: newTransactionHash ?? transactionHash,
       );
