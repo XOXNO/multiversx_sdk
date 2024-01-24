@@ -10,7 +10,7 @@ class GasPrice {
 class GasLimit {
   final int value;
 
-  const GasLimit(this.value) : assert(value > 0, 'value cannot be negative');
+  const GasLimit(this.value);
 
   factory GasLimit.forTransfert({
     TransactionPayload? data,
